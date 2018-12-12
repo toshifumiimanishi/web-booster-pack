@@ -1,0 +1,41 @@
+{
+  "name": "website-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development gulp",
+    "serve": "NODE_ENV=development gulp serve",
+    "deploy": "NODE_ENV=production gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "autoprefixer": "^9.4.2",
+    "browser-sync": "^2.26.3",
+    "css-declaration-sorter": "^4.0.1",
+    "csswring": "^7.0.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-data": "^1.3.1",
+    "gulp-ejs": "^3.3.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-reporter": "^6.0.0",
+    "stylelint": "^9.9.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 9",
+    "safari >= 9",
+    "ios >= 9.2",
+    "android >= 4.4.2"
+  ]
+}

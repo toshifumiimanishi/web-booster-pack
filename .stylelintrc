@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "string-quotes": "double",
+    "selector-pseudo-element-colon-notation": "double",
+    "color-hex-length": "short",
+    "number-leading-zero": "always",
+    "comment-empty-line-before": "always"
+  }
+}
