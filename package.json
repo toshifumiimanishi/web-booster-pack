@@ -8,6 +8,7 @@
     "serve": "NODE_ENV=development gulp serve",
     "deploy": "NODE_ENV=production gulp",
     "format:html": "prettier --write 'docs/**/*.html'",
+    "format:js": "eslint --fix 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,6 +21,8 @@
     "browser-sync": "^2.26.3",
     "css-declaration-sorter": "^4.0.1",
     "csswring": "^7.0.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-data": "^1.3.1",
