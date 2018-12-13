@@ -7,6 +7,7 @@
     "start": "NODE_ENV=development gulp",
     "serve": "NODE_ENV=development gulp serve",
     "deploy": "NODE_ENV=production gulp",
+    "format:html": "prettier --write 'docs/**/*.html'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -29,6 +30,7 @@
     "gulp-sass-glob": "^1.0.9",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-reporter": "^6.0.0",
+    "prettier": "^1.15.3",
     "stylelint": "^9.9.0"
   },
   "browserslist": [
