@@ -8,6 +8,7 @@
     "serve": "NODE_ENV=development gulp serve",
     "deploy": "NODE_ENV=production gulp",
     "format:html": "prettier --write 'docs/**/*.html'",
+    "format:css": "stylelint --fix 'src/**/*.scss'",
     "format:js": "eslint --fix 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -34,7 +35,9 @@
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-reporter": "^6.0.0",
     "prettier": "^1.15.3",
-    "stylelint": "^9.9.0"
+    "stylelint": "^9.9.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-prettier": "^1.0.5"
   },
   "browserslist": [
     "last 2 versions",
