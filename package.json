@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=development gulp",
     "serve": "NODE_ENV=development gulp serve",
-    "deploy": "NODE_ENV=production gulp",
+    "deploy": "npm run format:css & npm run format:js && NODE_ENV=production gulp && npm run format:html",
     "format:html": "prettier --write 'docs/**/*.html'",
     "format:css": "stylelint --fix 'src/**/*.scss'",
     "format:js": "eslint --fix 'src/**/*.js'",
