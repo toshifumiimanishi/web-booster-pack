@@ -35,6 +35,7 @@
     "gulp-sass-glob": "^1.0.9",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-reporter": "^6.0.0",
+    "postcss-scss": "^2.0.0",
     "prettier": "^1.15.3",
     "stylelint": "^9.9.0",
     "stylelint-config-prettier": "^4.0.0",

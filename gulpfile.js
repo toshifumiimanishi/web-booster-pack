@@ -5,6 +5,7 @@ const sass = require("gulp-sass");
 const sassGlob = require('gulp-sass-glob');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const postcssScss = require('postcss-scss');
 const flexbugsFixes = require('postcss-flexbugs-fixes');
 const csswring = require('csswring');
 const cssDeclarationSorter = require('css-declaration-sorter');
@@ -77,7 +78,7 @@ function styles() {
   }
 
   return gulp.src(paths.styles.src, { sourcemaps: isSourcemaps })
-    .pipe(postcss(plugins['sass']))
+    .pipe(postcss(plugins['sass'], { syntax: postcssScss }))
     .pipe(sassGlob())
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(postcss(plugins['css']))
