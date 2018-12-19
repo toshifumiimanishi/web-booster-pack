@@ -1,0 +1,19 @@
+img[alt=""] {
+  outline: 5px solid red;
+  ERROR: Alt が設定されていません。
+}
+
+a[href=""] {
+  outline: 5px solid red;
+  ERROR: リンクが設定されていません。
+}
+
+[target="_blank"]:not([rel="noopener noreferrer"]) {
+  outline: 5px solid red;
+  ERROR: フィッシング詐欺攻撃の脆弱性があります。
+}
+
+iframe:not([src*="rel=0"]) {
+  outline: 5px solid red;
+  ERROR: YouTube の関連動画を同チャンネル内に制御されてません。
+}
