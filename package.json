@@ -11,7 +11,7 @@
     "format:html": "prettier --write 'docs/**/*.html'",
     "format:css": "stylelint --fix 'src/**/*.scss'",
     "format:js": "eslint --fix 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "e2e": "jest test/e2e/snapshot.test.js"
   },
   "keywords": [],
   "author": "",
@@ -33,10 +33,14 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.0.9",
+    "jest": "^23.6.0",
+    "jest-image-snapshot": "^2.7.0",
+    "jest-puppeteer": "^3.7.0",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-reporter": "^6.0.0",
     "postcss-scss": "^2.0.0",
     "prettier": "^1.15.3",
+    "puppeteer": "^1.11.0",
     "stylelint": "^9.9.0",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-prettier": "^1.0.5"
