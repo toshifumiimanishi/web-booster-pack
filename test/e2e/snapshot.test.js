@@ -4,11 +4,17 @@ const path = require('path');
 describe('視覚回帰テスト', () => {
   const domain = 'http://example.com/';
   const rootPath = path.resolve(__dirname, '../../docs');
+  const username = '__username__';
+  const password = '__password__';
   const pageList = getPageList(rootPath);
   const urls = pageList.map(page => domain + page)
 
   urls.forEach(url => {
     test('スナップショット', async () => {
+      await page.authenticate({
+        username,
+        password
+      });
       await page.goto(url);
       const viewportHeight = page.viewport().height;
       await autoScrollDown(viewportHeight)
