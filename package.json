@@ -45,6 +45,10 @@
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-prettier": "^1.0.5"
   },
+  "jest": {
+    "preset": "jest-puppeteer",
+    "setupTestFrameworkScriptFile": "./test/e2e/jest-setup-test-framework.js"
+  },
   "browserslist": [
     "last 2 versions",
     "ie >= 9",
