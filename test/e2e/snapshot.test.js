@@ -1,3 +1,4 @@
+const devices = require('puppeteer/DeviceDescriptors');
 const fs = require('fs');
 const path = require('path');
 
@@ -6,11 +7,21 @@ describe('視覚回帰テスト', () => {
   const rootPath = path.resolve(__dirname, '../../docs');
   const username = '__username__';
   const password = '__password__';
+  const isMobile = false;
+  const device = 'iPhone 7';
+  const { width: deviceWidth, height: deviceHeight } = devices[device].viewport;
   const pageList = getPageList(rootPath);
   const urls = pageList.map(page => domain + page)
 
   urls.forEach(url => {
     test('スナップショット', async () => {
+      if (isMobile) {
+        await page.emulate(devices[device]);
+        await page.setViewport({
+          width: deviceWidth,
+          height: deviceHeight
+        });
+      }
       await page.authenticate({
         username,
         password
