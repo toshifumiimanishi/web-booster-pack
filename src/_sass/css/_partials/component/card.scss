@@ -1,0 +1,51 @@
+.c-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border-radius: 0.25rem;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 0 0 0.25rem;
+  }
+}
+
+.c-card_header {
+  flex-shrink: 0;
+}
+
+.c-card_body {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  background-color: #e9ebef;
+  flex-grow: 1;
+
+  > * + * {
+    margin-top: 0.75rem;
+  }
+
+  :nth-last-child(2) {
+    margin-bottom: 0.75rem;
+  }
+
+  :last-child {
+    margin-top: auto;
+  }
+}
+
+.c-card_tit {
+  text-align: center;
+}
+
+.c-card_link {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
