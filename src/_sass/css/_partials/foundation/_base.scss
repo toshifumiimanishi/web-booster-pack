@@ -1,5 +1,8 @@
 html {
-  font-size: $font-size-base;
+  font-size: $font-size-sm;
+  @include breakpoint-up(md) {
+    font-size: $font-size-md;
+  }
 }
 
 body {
