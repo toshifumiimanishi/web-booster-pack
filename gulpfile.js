@@ -121,7 +121,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.watch = watch;
 exports.serve = serve;
-exports.build = gulp.series(gulp.parallel(markup, styles, scripts), gulp.parallel(watch, serve));
+exports.dev = gulp.series(gulp.parallel(markup, styles, scripts), gulp.parallel(watch, serve));
 if (process.env.NODE_ENV === 'production') {
   exports.default = gulp.parallel(markup, styles, scripts);
 } else {
