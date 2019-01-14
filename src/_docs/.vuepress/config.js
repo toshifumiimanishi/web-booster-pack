@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Website Boilerplate',
+  base: "/website-boilerplate/",
   dest: 'docs',
   locales: {
     '/': {
