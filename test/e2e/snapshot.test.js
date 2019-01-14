@@ -4,7 +4,7 @@ const path = require('path');
 
 describe('視覚回帰テスト', () => {
   const domain = 'http://example.com/';
-  const rootPath = path.resolve(__dirname, '../../docs');
+  const rootPath = path.resolve(__dirname, '../../htdocs');
   const username = '__username__';
   const password = '__password__';
   const isMobile = false;
@@ -47,7 +47,7 @@ function getPageList(dir, arr = []) {
     const stats = fs.statSync(pathName);
 
     if (stats.isFile() && isHTML) {
-      arr.push(pathName.split('docs/')[1])
+      arr.push(pathName.split('htdocs/')[1])
     } else if (stats.isDirectory()) {
       getPageList(pathName, arr);
     }

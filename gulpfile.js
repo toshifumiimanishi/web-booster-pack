@@ -18,15 +18,15 @@ const fs = require('fs');
 const paths = {
   markup: {
     src: ['src/_ejs/**/*.ejs', '!' + 'src/_ejs/**/_*.ejs'],
-    dest: 'docs/'
+    dest: 'htdocs/'
   },
   styles: {
     src: 'src/_sass/**/*.scss',
-    dest: 'docs/'
+    dest: 'htdocs/'
   },
   scripts: {
     src: 'src/_js/**/*.js',
-    dest: 'docs/'
+    dest: 'htdocs/'
   }
 };
 
@@ -103,14 +103,14 @@ function watch() {
   gulp.watch('src/_ejs/**/*.{ejs, json}', markup);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.scripts.src, scripts);
-  gulp.watch('docs/**/*.html').on('change', browserSync.reload);
+  gulp.watch('htdocs/**/*.html').on('change', browserSync.reload);
 }
 
 function serve() {
   browserSync.init({
     ghostMode: false,
     server: {
-      baseDir: "docs"
+      baseDir: "htdocs"
     },
     open: 'external'
   });
