@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development gulp",
-    "serve": "NODE_ENV=development gulp serve",
+    "docs:dev": "vuepress dev src/_docs",
+    "docs:build": "vuepress build src/_docs",
     "dev": "NODE_ENV=development gulp dev",
     "deploy": "npm run format:css & npm run format:js && NODE_ENV=production gulp && npm run format:html",
-    "format:html": "prettier --write 'docs/**/*.html'",
+    "format:html": "prettier --write 'htdocs/**/*.html'",
     "format:css": "stylelint --fix 'src/**/*.scss'",
     "format:js": "eslint --fix 'src/**/*.js'",
     "e2e": "jest test/e2e/snapshot.test.js"
@@ -43,7 +44,8 @@
     "puppeteer": "^1.11.0",
     "stylelint": "^9.9.0",
     "stylelint-config-prettier": "^4.0.0",
-    "stylelint-prettier": "^1.0.5"
+    "stylelint-prettier": "^1.0.5",
+    "vuepress": "^1.0.0-alpha.31"
   },
   "jest": {
     "preset": "jest-puppeteer",
