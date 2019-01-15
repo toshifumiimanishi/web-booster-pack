@@ -9,7 +9,8 @@ module.exports = {
   },
   themeConfig: {
     nav: [
-      { text: 'Components', link: '/components/'}
+      { text: 'Components', link: '/components/'},
+      { text: 'GitHub', link: 'https://github.com/toshifumiimanishi/website-boilerplate'}
     ],
     sidebar: [
       '/components/',
