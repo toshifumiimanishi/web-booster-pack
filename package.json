@@ -42,6 +42,7 @@
     "postcss-scss": "^2.0.0",
     "prettier": "^1.15.3",
     "puppeteer": "^1.11.0",
+    "sass-loader": "^7.1.0",
     "stylelint": "^9.9.0",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-prettier": "^1.0.5",
