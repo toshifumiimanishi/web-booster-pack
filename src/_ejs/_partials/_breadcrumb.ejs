@@ -1,0 +1,18 @@
+<nav aria-label="Breadcrumb">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="/" itemprop="item">
+        <span itemprop="name">第一階層</span>
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+    <%_ for (var i = 0; i < breadcrumbList.length; i++) { _%>
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"<% if (i === breadcrumbList.length - 1) { -%> aria-current="page"<% } %>>
+      <a href="<%- breadcrumbLink[i] %>" itemprop="item">
+        <span itemprop="name"><%- breadcrumbList[i] %></span>
+      </a>
+      <meta itemprop="position" content="<%- i + 2 %>" />
+    </li>
+    <%_ } _%>
+  </ol>
+</nav>
