@@ -1,5 +1,38 @@
 # Components
 
+## Breadcrumb
+
+パンくずリストのインクルードの例を以下に示す。
+
+```
+<%- include(sitedata.path.relative + '_partials/_breadcrumb', {breadcrumbList: ['第二階層', '第三階層'], breadcrumbLink: ['/standards/example.html', '/example.html']}) %>
+```
+
+コンパイル結果は以下の通りになる。構造化データの形式は、Microdata を使用する。
+
+``` html
+<nav aria-label="Breadcrumb">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">第一階層</span></a>
+      <meta itemprop="position" content="1" />
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="/standards/example.html" itemprop="item"><span itemprop="name">第二階層</span></a>
+      <meta itemprop="position" content="2" />
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-current="page">
+      <a href="/example.html" itemprop="item"><span itemprop="name">第三階層</span></a>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+</nav>
+```
+
+### Microdata vs JSON-LD
+
+Google は、構造化データには JSON-LD の使用を推奨している。しかし、テンプレートエンジンに構造化データを組み込む際、`script` 要素に構造化データを切り離す JSON-LD より Microdata のほうが都合がよい。
+
 ## Card
 
 基本的なカードの例を以下に示す。Flexbox の設計は、各カードのコンテンツ量に依存しない高さ（=高さ合わせ）を可能にする。カード全体をクリッカブルにする場合、スクリーンリーダーの冗長な読み上げを避けるため、擬似要素でカード全体をクリッカブルにする方法を推奨する。
