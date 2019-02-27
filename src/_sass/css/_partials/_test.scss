@@ -1,6 +1,13 @@
-img[alt=""] {
-  outline: 5px solid red;
-  ERROR: Alt が設定されていません。
+img {
+  &:not([alt]) {
+    outline: 5px solid red;
+    ERROR: img 要素には、alt 属性が必須です。
+  }
+
+  &[alt=""] {
+    outline: 5px solid yellow;
+    WARNING: alt 属性の値が指定されていません。
+  }
 }
 
 a[href=""] {
