@@ -88,3 +88,13 @@ Google は、構造化データには JSON-LD の使用を推奨している。�
   </div>
 </div>
 ```
+
+## Modal
+
+モーダルは HTML、CSS、および JavaScript で構築されている。モーダルの発火には、`.js-toggle-modal` を追加し、`data-target` でモーダルのターゲットを設定する。モーダルの起動例を以下に示す。
+
+<button class="js-toggle-modal" data-target=".modal-01" type="button">Launch modal</button>
+``` html
+<button class="js-toggle-modal" data-target=".modal-01" type="button">Launch modal</button>
+```
+<modal />

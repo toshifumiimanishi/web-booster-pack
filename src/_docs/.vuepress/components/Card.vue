@@ -20,7 +20,7 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 250px;
   border-radius: 0.25rem;
   overflow: hidden;
 
