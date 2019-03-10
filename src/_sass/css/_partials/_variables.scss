@@ -1,26 +1,37 @@
 $background-color-base: #fff;
 $base-font-family: "Yu Gothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana,
   "ＭＳ Ｐゴシック", sans-serif;
-$font-size-md: 16px !default;
-$font-size-sm: 3.125vw !default;
+$font-size-sm: 2.6666667vw !default;
+$font-size-md: 10px !default;
 $font-color-base: #333;
 $line-height-base: 1.6875;
 
 $breakpoints: (
   sm: 0,
-  md: 960px,
+  md: 768px,
   lg: 1280px
 ) !default;
 
-$color-black: #000;
-$color-white: #fff;
+$color-black: #000 !default;
+$color-white: #fff !default;
+$color-blue: #007bff !default;
+
+$btn-primary-color: $color-white !default;
+$btn-primary-bg: $color-blue !default;
+
+$modal-dialog-bg: $color-white !default;
+$modal-backdrop: $color-black !default;
 
 $zindex-overlay: 1000 !default;
 $zindex-tooltip: 1001 !default;
 $zindex-carousel: 1002 !default;
 $zindex-dropdown: 1003 !default;
 $zindex-stickHeader: 1004 !default;
-$zindex-loader: 1005 !default;
+$zindex-modal: 1005 !default;
+$zindex-loader: 1006 !default;
+
+$modal-offset-x: 20px; // モーダルウィンドウの左右の余白
+$modal-offset-top: 64px; // モーダルウィンドウの上の余白（コンテンツ内の要素が画面の高さを超えた場合に適用される）
 
 $linear: cubic-bezier(0.25, 0.25, 0.75, 0.75);
 $ease: cubic-bezier(0.25, 0.1, 0.25, 1);

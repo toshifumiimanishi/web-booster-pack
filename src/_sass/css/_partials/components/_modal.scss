@@ -1,0 +1,60 @@
+.c-modal {
+  z-index: $zindex-modal;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 0 $modal-offset-x;
+  background-color: rgba($modal-backdrop, 0.7);
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  &[aria-hidden="true"] {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.c-modal_container {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+
+  // 以下、IE11 ハック
+  _:-ms-lang(x)::-ms-backdrop,
+  & {
+    min-height: 100vh;
+  }
+  &::after {
+    content: "";
+    min-height: inherit;
+    font-size: 0;
+  }
+}
+
+.c-modal_contents {
+  position: relative;
+  margin: $modal-offset-top auto;
+  width: 100%;
+}
+
+.c-modal_content {
+  display: none;
+  padding: 1.6rem;
+  border-radius: 2px;
+  background: $modal-dialog-bg;
+  [aria-hidden="false"] & {
+    display: block;
+  }
+}
+
+.c-modal_btn {
+  &.-floating {
+    position: absolute;
+    top: -54px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+  }
+}
