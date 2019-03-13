@@ -80,7 +80,10 @@ function styles() {
   return gulp.src(paths.styles.src, { sourcemaps: isSourcemaps })
     .pipe(postcss(plugins['sass'], { syntax: postcssScss }))
     .pipe(sassGlob())
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass({
+      outputStyle: 'expanded',
+      includePaths: ['node_modules/']
+    }).on('error', sass.logError))
     .pipe(postcss(plugins['css']))
     .pipe(gulp.dest(paths.styles.dest, { sourcemaps: isSourcemaps }))
     .pipe(browserSync.stream());
