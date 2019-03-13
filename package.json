@@ -8,7 +8,7 @@
     "docs:dev": "vuepress dev src/_docs",
     "docs:build": "vuepress build src/_docs",
     "dev": "NODE_ENV=development gulp dev",
-    "deploy": "npm run format:css & npm run format:js && NODE_ENV=production gulp && npm run format:html",
+    "build": "npm run format:css & npm run format:js && NODE_ENV=production gulp && npm run format:html",
     "format:html": "prettier --write 'htdocs/**/*.html'",
     "format:css": "stylelint --fix 'src/**/*.scss'",
     "format:js": "eslint --fix 'src/**/*.js'",

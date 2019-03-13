@@ -15,7 +15,7 @@ yarn start
 ```
 yarn dev
 ```
-以下のコマンドでデプロイします。
+以下のコマンドでビルドします。
 ```
-yarn deploy
+yarn build
 ```
