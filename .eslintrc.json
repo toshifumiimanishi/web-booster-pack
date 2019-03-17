@@ -11,6 +11,9 @@
     "$": false,
     "jQuery": false
   },
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "rules": {
     "indent": [
       "error",

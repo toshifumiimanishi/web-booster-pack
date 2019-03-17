@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development gulp",
     "docs:dev": "vuepress dev src/_docs",
     "docs:build": "vuepress build src/_docs",
-    "dev": "NODE_ENV=development gulp dev",
-    "build": "npm run format:css & npm run format:js && NODE_ENV=production gulp && npm run format:html",
+    "bundle:dev": "NODE_ENV=development rollup -c -w",
+    "bundle:build": "NODE_ENV=production rollup -c",
+    "dev": "NODE_ENV=development gulp dev & npm run bundle:dev",
+    "build": "npm run format:css & npm run format:js && NODE_ENV=production gulp & npm run bundle:build && npm run format:html",
     "format:html": "prettier --write 'htdocs/**/*.html'",
     "format:css": "stylelint --fix 'src/**/*.scss'",
     "format:js": "eslint --fix 'src/**/*.js'",
@@ -42,6 +43,10 @@
     "postcss-scss": "^2.0.0",
     "prettier": "^1.15.3",
     "puppeteer": "^1.11.0",
+    "rollup": "^1.6.0",
+    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-terser": "^4.0.4",
     "sass-loader": "^7.1.0",
     "stylelint": "^9.9.0",
     "stylelint-config-prettier": "^4.0.0",
@@ -58,5 +63,8 @@
     "safari >= 9",
     "ios >= 9.2",
     "android >= 4.4.2"
-  ]
+  ],
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5"
+  }
 }

@@ -25,7 +25,7 @@ const paths = {
     dest: 'htdocs/'
   },
   scripts: {
-    src: 'src/_js/**/*.js',
+    src: ['src/_js/**/*.js', '!' + 'src/_js/js/entry.js'],
     dest: 'htdocs/'
   }
 };
