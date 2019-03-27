@@ -7,7 +7,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const postcssScss = require('postcss-scss');
 const flexbugsFixes = require('postcss-flexbugs-fixes');
-const csswring = require('csswring');
+const cssnano = require('cssnano');
 const cssDeclarationSorter = require('css-declaration-sorter');
 const stylelint = require('stylelint');
 const reporter = require('postcss-reporter');
@@ -74,7 +74,7 @@ function styles() {
     ]
   };
   if (process.env.NODE_ENV === 'production') {
-    plugins['css'] = [...plugins['css'], csswring()];
+    plugins['css'] = [...plugins['css'], cssnano()];
   }
 
   return gulp.src(paths.styles.src, { sourcemaps: isSourcemaps })
