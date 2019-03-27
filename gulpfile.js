@@ -82,7 +82,8 @@ function styles() {
     .pipe(sassGlob())
     .pipe(sass({
       outputStyle: 'expanded',
-      includePaths: ['node_modules/']
+      includePaths: ['node_modules/'],
+      precision: 7
     }).on('error', sass.logError))
     .pipe(postcss(plugins['css']))
     .pipe(gulp.dest(paths.styles.dest, { sourcemaps: isSourcemaps }))
