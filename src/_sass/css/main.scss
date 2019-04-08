@@ -9,4 +9,14 @@
 @import "_partials/utilities";
 
 // テスト駆動マークアップ用スタイルシート
-// @import "_partials/test";
+%test {
+  @import "_partials/test";
+}
+
+$mode: "production";
+
+:root {
+  @if $mode == "development" {
+    @extend %test;
+  }
+}
