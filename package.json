@@ -9,7 +9,7 @@
     "bundle:dev": "NODE_ENV=development rollup -c -w",
     "bundle:build": "NODE_ENV=production rollup -c",
     "dev": "NODE_ENV=development gulp dev & npm run bundle:dev",
-    "build": "npm run format:css & npm run format:js && NODE_ENV=production gulp & npm run bundle:build && npm run format:html",
+    "build": "npm run format:css & npm run format:js && NODE_ENV=production gulp && npm run bundle:build && npm run format:html",
     "format:html": "prettier --write 'htdocs/**/*.html'",
     "format:css": "stylelint --fix 'src/**/*.scss'",
     "format:js": "eslint --fix 'src/**/*.js'",
@@ -35,14 +35,14 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.0.9",
-    "jest": "^23.6.0",
-    "jest-image-snapshot": "^2.7.0",
-    "jest-puppeteer": "^3.7.0",
+    "jest": "^24.7.1",
+    "jest-image-snapshot": "^2.8.1",
+    "jest-puppeteer": "^4.1.1",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-reporter": "^6.0.0",
     "postcss-scss": "^2.0.0",
     "prettier": "^1.15.3",
-    "puppeteer": "^1.11.0",
+    "puppeteer": "^1.14.0",
     "rollup": "^1.6.0",
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-node-resolve": "^4.0.1",
@@ -55,7 +55,9 @@
   },
   "jest": {
     "preset": "jest-puppeteer",
-    "setupTestFrameworkScriptFile": "./test/e2e/jest-setup-test-framework.js"
+    "setupFilesAfterEnv": [
+      "./test/e2e/jest-setup-test-framework.js"
+    ]
   },
   "browserslist": [
     "last 2 versions",
