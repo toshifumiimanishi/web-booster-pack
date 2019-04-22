@@ -5539,6 +5539,14 @@ gulp-sass-glob@^1.0.9:
     slash "^2.0.0"
     through2 "^2.0.3"
 
+gulp-sass-variables@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/gulp-sass-variables/-/gulp-sass-variables-1.2.0.tgz#ff532bbddd52b8f3dd2019e21be8d42049a8728a"
+  integrity sha512-xdRyM/OXlRLcK2rN4K7cucc/5eHoqS1MLgAI79tW5gRYAdxF8pYX7Zuj89zu4RchX9nr2Yu/jIC146V/6w7TnA==
+  dependencies:
+    plugin-error "^1.0.1"
+    through2 "^2.0.1"
+
 gulp-sass@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/gulp-sass/-/gulp-sass-4.0.2.tgz#cfb1e3eff2bd9852431c7ce87f43880807d8d505"
@@ -11959,7 +11967,7 @@ through2-filter@^2.0.0:
     through2 "~2.0.0"
     xtend "~4.0.0"
 
-through2@^2.0.0, through2@^2.0.3, through2@~2.0.0:
+through2@^2.0.0, through2@^2.0.1, through2@^2.0.3, through2@~2.0.0:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.5.tgz#01c1e39eb31d07cb7d03a96a70823260b23132cd"
   integrity sha512-/mrRod8xqpA+IHSLyGCQ2s8SPHiCDEeQJSep1jqLYeEUClOFG2Qsh+4FU6G9VeqpZnGW/Su8LQGc4YKni5rYSQ==

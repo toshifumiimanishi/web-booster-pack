@@ -13,8 +13,6 @@
   @import "_partials/test";
 }
 
-$mode: "production";
-
 :root {
   @if $mode == "development" {
     @extend %test;

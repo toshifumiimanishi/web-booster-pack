@@ -3,6 +3,7 @@ const ejs = require('gulp-ejs');
 const data = require('gulp-data');
 const sass = require("gulp-sass");
 const sassGlob = require('gulp-sass-glob');
+const sassVariables = require('gulp-sass-variables');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const postcssScss = require('postcss-scss');
@@ -79,6 +80,9 @@ function styles() {
 
   return gulp.src(paths.styles.src, { sourcemaps: isSourcemaps })
     .pipe(postcss(plugins['sass'], { syntax: postcssScss }))
+    .pipe(sassVariables({
+      $mode: process.env.NODE_ENV
+    }))
     .pipe(sassGlob())
     .pipe(sass({
       outputStyle: 'expanded',

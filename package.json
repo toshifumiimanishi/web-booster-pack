@@ -35,6 +35,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.0.9",
+    "gulp-sass-variables": "^1.2.0",
     "jest": "^24.7.1",
     "jest-image-snapshot": "^2.8.1",
     "jest-puppeteer": "^4.1.1",
