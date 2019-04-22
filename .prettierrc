@@ -1,5 +1,5 @@
 {
   "printWidth": 120,
   "endOfLine": "lf",
-  "htmlWhitespaceSensitivity": "ignore"
+  "htmlWhitespaceSensitivity": "strict"
 }
