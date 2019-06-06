@@ -8,6 +8,12 @@
     "color-hex-length": "short",
     "number-leading-zero": "always",
     "comment-empty-line-before": "always",
-    "block-no-empty": true
+    "block-no-empty": true,
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "ignore": ["after-comment", "first-nested"]
+      }
+    ]
   }
 }

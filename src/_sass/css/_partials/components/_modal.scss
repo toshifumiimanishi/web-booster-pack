@@ -8,6 +8,7 @@
   background-color: rgba($modal-backdrop, 0.7);
   transition: all 0.3s ease;
   overflow-y: auto;
+
   &[aria-hidden="true"] {
     opacity: 0;
     visibility: hidden;
@@ -24,6 +25,7 @@
   & {
     min-height: 100vh;
   }
+
   &::after {
     content: "";
     min-height: inherit;
@@ -42,6 +44,7 @@
   padding: 1.6rem;
   border-radius: 2px;
   background: $modal-dialog-bg;
+
   [aria-hidden="false"] & {
     display: block;
   }

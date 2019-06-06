@@ -11,6 +11,7 @@
   touch-callout: none;
   user-select: none;
   position: relative;
+
   &::before {
     content: "";
     display: block;
