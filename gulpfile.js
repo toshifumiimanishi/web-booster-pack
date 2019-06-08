@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const ejs = require('gulp-ejs');
 const data = require('gulp-data');
+const rename = require('gulp-rename');
 const sass = require("gulp-sass");
 const sassGlob = require('gulp-sass-glob');
 const sassVariables = require('gulp-sass-variables');
@@ -52,10 +53,10 @@ function markup() {
       return sitedata;
     }))
     .pipe(ejs({
+      'root': 'src/_ejs/',
       'sitedata': sitedata
-    }, {}, {
-      ext: '.html'
     }).on('error', onError))
+    .pipe(rename({extname: '.html'}))
     .pipe(gulp.dest(paths.markup.dest));
 }
 
