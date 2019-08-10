@@ -1,0 +1,12 @@
+// `line-height` の上下余白を取り除く
+@mixin line-height-crop($line-height, $direction: top) {
+  $pseudo: if($direction == top, before, after);
+
+  &::#{$pseudo} {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-#{$direction}: calc((1 - #{$line-height}) * 0.5em);
+  }
+}

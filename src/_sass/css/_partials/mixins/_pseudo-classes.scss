@@ -1,0 +1,23 @@
+// 要素数が n 個以上の各要素に適用される
+@mixin nth-or-more($n) {
+  &:first-child:nth-last-child(n + #{$n}),
+  &:first-child:nth-last-child(n + #{$n}) ~ & {
+    @content;
+  }
+}
+
+// 要素数が n 個以下の各要素に適用される
+@mixin nth-or-less($n) {
+  &:first-child:nth-last-child(-n + #{$n}),
+  &:first-child:nth-last-child(-n + #{$n}) ~ & {
+    @content;
+  }
+}
+
+// 要素数が n から m までの各要素に適用される
+@mixin nth-between($n, $m) {
+  &:first-child:nth-last-child(n + #{$n}):nth-last-child(-n + #{$m}),
+  &:first-child:nth-last-child(n + #{$n}):nth-last-child(-n + #{$m}) ~ & {
+    @content;
+  }
+}
