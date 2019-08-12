@@ -2,7 +2,7 @@ const modal = (function() {
   const toggleButton = document.querySelectorAll('.js-toggle-modal');
   let currentScrollY = 0;
 
-  toggleButton.forEach(element => {
+  toggleButton.forEach((element: HTMLElement) => {
     const target = document.querySelector(element.dataset.target);
     const dialog = target.querySelector('[role="document"]');
     const dismissButton = target.querySelectorAll('[data-dismiss="modal"]');
@@ -25,7 +25,7 @@ const modal = (function() {
       event.stopPropagation();
     });
 
-    element.addEventListener('keydown', event => {
+    element.addEventListener('keydown', (event: KeyboardEvent) => {
       const escKeyCode = 27;
 
       if (event.keyCode === escKeyCode) {

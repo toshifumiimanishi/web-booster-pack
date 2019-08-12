@@ -7,10 +7,14 @@
     "eslint:recommended",
     "plugin:prettier/recommended"
   ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "globals": {
     "$": false,
     "jQuery": false
   },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "sourceType": "module"
   },

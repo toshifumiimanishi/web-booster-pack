@@ -4,7 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 const isProduction = process.env.NODE_ENV === 'production';
 
 export default (async () => ({
-  input: 'src/_js/js/entry.js',
+  input: 'src/_ts/js/entry.ts',
   output: {
     file: 'htdocs/js/bundle.js',
     format: 'umd',
