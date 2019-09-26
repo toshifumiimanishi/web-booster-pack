@@ -1,1 +1,8 @@
+# Dependency directories
+node_modules/
+
+# Jest Snapshot Testing
 __image_snapshots__
+
+# Mac OSX
+.DS_Store
