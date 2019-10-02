@@ -9,6 +9,7 @@
     "number-leading-zero": "always",
     "comment-empty-line-before": "always",
     "block-no-empty": true,
+    "length-zero-no-unit": true,
     "rule-empty-line-before": [
       "always-multi-line",
       {
