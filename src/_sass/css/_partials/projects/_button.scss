@@ -1,0 +1,30 @@
+.p-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5em 3em;
+  border: $btn-border-width solid transparent;
+  background-color: $btn-bg-color;
+  color: $btn-color;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: $btn-line-height;
+
+  @include anime-fill-center($btn-outline-bg-color);
+
+  &.-primary {
+    background-color: $btn-primary-bg-color;
+
+    &::after {
+      background-color: $btn-primary-bg-color;
+    }
+  }
+
+  &.-outline {
+    border-color: $btn-outline-border-color;
+    background-color: transparent;
+  }
+
+  &.-primary.-outline {
+    border-color: $btn-primary-outline-border-color;
+  }
+}

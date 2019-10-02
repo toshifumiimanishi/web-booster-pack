@@ -27,3 +27,10 @@ a {
     transition: none !important;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $dark-background-color-base;
+    color: $dark-font-color-base;
+  }
+}

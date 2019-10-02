@@ -1,0 +1,23 @@
+@mixin anime-fill-center($background-color) {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 0;
+    background-color: $background-color;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    transition: height 0.75s ease;
+  }
+
+  &:hover {
+    &::after {
+      height: 450%;
+    }
+  }
+}
