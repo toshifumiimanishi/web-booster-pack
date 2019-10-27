@@ -1,0 +1,56 @@
+.drawer {
+  z-index: $zindex-drawer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: visibility $drawer-transition-duration $base-timing-function;
+
+  &[aria-hidden="true"] {
+    visibility: hidden;
+  }
+
+  &[aria-hidden="false"] {
+    visibility: visible;
+  }
+}
+
+.drawer_nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-left: 1rem;
+  width: 300px;
+  max-height: 100%;
+  background-color: $drawer-bg-color;
+  overflow: auto;
+  transition: transform $drawer-transition-duration $base-timing-function;
+
+  [aria-hidden="true"] & {
+    transform: translateX(100%);
+  }
+
+  [aria-hidden="false"] & {
+    transform: translateX(0);
+  }
+}
+
+.drawer_backdrop {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($drawer-backdrop-bg-color, 0.5);
+  transition: opacity $drawer-transition-duration $base-timing-function;
+
+  [aria-hidden="true"] & {
+    opacity: 0;
+  }
+
+  [aria-hidden="false"] & {
+    opacity: 1;
+  }
+}

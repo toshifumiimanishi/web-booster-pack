@@ -1,3 +1,32 @@
+var drawer = (function () {
+    var toggle = document.querySelector('.js-drawer');
+    var dismiss = document.querySelector('.js-drawer-dismiss');
+    var target = toggle.getAttribute('aria-controls');
+    var drawer = document.querySelector("#" + target);
+    var isExpanded = toggle.getAttribute('aria-expanded') === 'true' || false;
+    var _init = function () {
+        _handle();
+    };
+    var _handle = function () {
+        toggle.addEventListener('click', _toggle, false);
+        dismiss.addEventListener('click', _toggle, false);
+    };
+    var _toggle = function () {
+        isExpanded = !isExpanded;
+        if (isExpanded) {
+            toggle.setAttribute('aria-expanded', 'true');
+            drawer.setAttribute('aria-hidden', 'false');
+        }
+        else {
+            toggle.setAttribute('aria-expanded', 'false');
+            drawer.setAttribute('aria-hidden', 'true');
+        }
+    };
+    return {
+        init: _init
+    };
+})();
+drawer.init();
 var modal = (function () {
     var toggleButton = document.querySelectorAll('.js-toggle-modal');
     var currentScrollY = 0;
