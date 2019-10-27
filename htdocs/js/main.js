@@ -1,3 +1,17 @@
+var loader = (function () {
+    var loader = document.querySelector('.js-loader');
+    var target = loader.dataset.target;
+    var _init = function () {
+        window.addEventListener('load', function () {
+            loader.setAttribute('aria-hidden', 'true');
+            document.querySelector(target).setAttribute('aria-busy', 'false');
+        });
+    };
+    return {
+        init: _init
+    };
+})();
+loader.init();
 var drawer = (function () {
     var toggle = document.querySelector('.js-drawer');
     var dismiss = document.querySelector('.js-drawer-dismiss');

@@ -1,0 +1,15 @@
+.c-spinner {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  border: 0.4rem solid $spinner-border-color;
+  border-right-color: transparent;
+
+  &[aria-busy="true"] {
+    animation: spin 1s infinite linear;
+  }
+
+  &[aria-busy="false"] {
+    visibility: hidden;
+  }
+}

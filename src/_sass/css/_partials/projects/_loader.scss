@@ -1,0 +1,29 @@
+.p-loader {
+  z-index: $zindex-loader;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $color-black-light;
+  transition: opacity 1.5s ease;
+  transition-property: opacity, visibility;
+  opacity: 1;
+
+  &[aria-hidden="true"] {
+    opacity: 0;
+  }
+
+  &[aria-hidden="true"] {
+    visibility: hidden;
+  }
+}
+
+.p-loader_spinner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
