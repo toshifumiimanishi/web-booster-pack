@@ -3,11 +3,11 @@
   align-items: center;
   padding: 0.5em 3em;
   border: $btn-border-width solid transparent;
-  background-color: $btn-bg-color;
   color: $btn-color;
-  font-size: 1.4rem;
   font-weight: bold;
+  font-size: 1.4rem;
   line-height: $btn-line-height;
+  background-color: $btn-bg-color;
 
   @include anime-fill-center($btn-outline-bg-color);
 

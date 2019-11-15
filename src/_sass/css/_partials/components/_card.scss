@@ -22,9 +22,9 @@
 .c-card_body {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   padding: 2em;
   background-color: #e9ebef;
-  flex-grow: 1;
 
   > * + * {
     margin-top: 0.75rem;
@@ -45,11 +45,11 @@
 
 .c-card_link {
   &::after {
-    content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    content: "";
   }
 }

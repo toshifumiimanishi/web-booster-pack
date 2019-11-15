@@ -52,9 +52,9 @@ progress {
 
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
@@ -92,8 +92,8 @@ textarea {
   min-height: 1.5em;
   color: inherit;
   font-weight: inherit;
-  font-style: inherit;
   font-family: inherit;
+  font-style: inherit;
 }
 
 button {
@@ -109,8 +109,8 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
   cursor: pointer;
+  -webkit-appearance: button;
 }
 
 button[disabled],
@@ -120,8 +120,8 @@ html input[disabled] {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
   padding: 0;
+  border: 0;
 }
 
 input {
@@ -146,8 +146,8 @@ select {
 }
 
 table {
-  border-spacing: 0;
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 fieldset {

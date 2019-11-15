@@ -1,9 +1,9 @@
 .c-spinner {
-  border-radius: 50%;
   width: 3rem;
   height: 3rem;
   border: 0.4rem solid $spinner-border-color;
   border-right-color: transparent;
+  border-radius: 50%;
 
   &[aria-busy="true"] {
     animation: spin 1s infinite linear;

@@ -3,10 +3,10 @@
   $pseudo: if($direction == top, before, after);
 
   &::#{$pseudo} {
-    content: "";
     display: block;
     width: 0;
     height: 0;
+    content: "";
     margin-#{$direction}: calc((1 - #{$line-height}) * 0.5em);
   }
 }

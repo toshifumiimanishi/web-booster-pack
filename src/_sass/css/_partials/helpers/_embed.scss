@@ -3,8 +3,8 @@
   width: 100%;
 
   &::before {
-    content: "";
     display: block;
+    content: "";
   }
 
   &.-aspect4by3 {

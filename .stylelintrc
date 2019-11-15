@@ -1,6 +1,13 @@
 {
-  "plugins": ["stylelint-prettier"],
-  "extends": ["stylelint-prettier/recommended"],
+  "plugins": [
+    "stylelint-prettier",
+    "stylelint-order",
+    "stylelint-config-rational-order/plugin"
+  ],
+  "extends": [
+    "stylelint-prettier/recommended",
+    "stylelint-config-rational-order"
+  ],
   "ignoreFiles": "src/_sass/css/_partials/_test.scss",
   "rules": {
     "string-quotes": "double",
@@ -15,6 +22,10 @@
       {
         "ignore": ["after-comment", "first-nested"]
       }
-    ]
+    ],
+    "plugin/rational-order": [true, {
+      "border-in-box-model": true,
+      "empty-line-between-groups": false
+    }]
   }
 }

@@ -6,31 +6,31 @@ html {
 }
 
 body {
-  background-color: $background-color-base;
   color: $font-color-base;
   font-size: 1.6rem;
   font-family: $base-font-family;
-  -webkit-text-size-adjust: 100%;
   line-height: $line-height-base;
   word-wrap: break-word;
+  background-color: $background-color-base;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 // アクセシビリティ対応｜iPhone の「視差効果を減らす」に設定しているユーザーに対して、アニメーションを無効にする。
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation: unset !important;
     transition: none !important;
+    animation: unset !important;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: $dark-background-color-base;
     color: $dark-font-color-base;
+    background-color: $dark-background-color-base;
   }
 }

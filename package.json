@@ -69,6 +69,8 @@
     "not dead"
   ],
   "dependencies": {
-    "@babel/polyfill": "^7.2.5"
+    "@babel/polyfill": "^7.2.5",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^3.1.1"
   }
 }

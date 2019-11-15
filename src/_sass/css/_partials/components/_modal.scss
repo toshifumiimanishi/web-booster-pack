@@ -1,24 +1,24 @@
 .c-modal {
-  z-index: $zindex-modal;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: $zindex-modal;
   height: 100%;
   padding: 0 $modal-offset-x;
+  overflow-y: auto;
   background-color: rgba($modal-backdrop, 0.7);
   transition: all 0.3s ease;
-  overflow-y: auto;
 
   &[aria-hidden="true"] {
-    opacity: 0;
     visibility: hidden;
+    opacity: 0;
   }
 }
 
 .c-modal_container {
   display: flex;
-  min-height: 100%;
   align-items: center;
+  min-height: 100%;
 
   // 以下、IE11 ハック
   _:-ms-lang(x)::-ms-backdrop,
@@ -27,16 +27,16 @@
   }
 
   &::after {
-    content: "";
     min-height: inherit;
     font-size: 0;
+    content: "";
   }
 }
 
 .c-modal_contents {
   position: relative;
-  margin: $modal-offset-top auto;
   width: 100%;
+  margin: $modal-offset-top auto;
 }
 
 .c-modal_content {
@@ -57,7 +57,7 @@
     right: 10px;
     width: 44px;
     height: 44px;
-    border-radius: 50%;
     border: none;
+    border-radius: 50%;
   }
 }
