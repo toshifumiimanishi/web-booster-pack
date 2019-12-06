@@ -37,8 +37,6 @@ $color-red: #d24d57 !default;
 $background-color-base: $color-white;
 $base-font-family: "Yu Gothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana,
   "ＭＳ Ｐゴシック", sans-serif;
-$font-size-sm: 2.6666667vw !default;
-$font-size-md: 10px !default;
 $font-color-base: $color-black-light;
 $line-height-base: 1.6875;
 
@@ -46,6 +44,12 @@ $base-timing-function: ease;
 
 $dark-background-color-base: $color-black-light;
 $dark-font-color-base: $color-white;
+
+$root-font-sizes: (
+  sm: 3.125vw,
+  md: 10px,
+  lg: 10px
+) !default;
 
 $breakpoints: (
   sm: 0,

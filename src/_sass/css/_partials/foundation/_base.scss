@@ -1,7 +1,10 @@
-html {
-  font-size: $font-size-sm;
-  @include breakpoint-up(md) {
-    font-size: $font-size-md;
+:root {
+  @each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+      @each $value in map-get($root-font-sizes, $breakpoint) {
+        font-size: $value;
+      }
+    }
   }
 }
 
