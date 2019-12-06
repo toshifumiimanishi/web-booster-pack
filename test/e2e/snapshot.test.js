@@ -27,6 +27,7 @@ describe('視覚回帰テスト', () => {
         password
       });
       await page.goto(url);
+      await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: 'dark' }])
       const viewportHeight = page.viewport().height;
       await autoScrollDown(viewportHeight)
       const image = await page.screenshot({
