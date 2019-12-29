@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+@use "sass:meta";
 @import "_partials/variables";
 @import "_partials/function";
 @import "_partials/mixins/**";
@@ -13,12 +14,8 @@
 @import "_partials/utilities";
 
 // テスト駆動マークアップ用スタイルシート
-%test {
-  @import "_partials/test";
-}
-
 :root {
   @if $mode == "development" {
-    @extend %test;
+    @include meta.load-css("_partials/test");
   }
 }
