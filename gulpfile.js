@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const ejs = require('gulp-ejs');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
-const sass = require("gulp-sass");
+const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const sassVariables = require('gulp-sass-variables');
 const postcss = require('gulp-postcss');
@@ -18,6 +18,7 @@ const tsProject = ts.createProject('tsconfig.json');
 const eslint = require('gulp-eslint');
 const browserSync = require('browser-sync').create();
 const fs = require('fs');
+sass.compiler = require('sass');
 const paths = {
   markup: {
     src: ['src/_ejs/**/*.ejs', '!' + 'src/_ejs/**/_*.ejs'],
@@ -32,7 +33,6 @@ const paths = {
     dest: 'htdocs/'
   }
 };
-
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 function markup() {
@@ -76,6 +76,7 @@ function styles() {
       cssDeclarationSorter({order: 'smacss'}),
     ]
   };
+
   if (process.env.NODE_ENV === 'production') {
     plugins['css'] = [...plugins['css'], cssnano()];
   }

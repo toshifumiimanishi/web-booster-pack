@@ -49,6 +49,7 @@
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-plugin-terser": "^4.0.4",
+    "sass": "^1.24.0",
     "sass-loader": "^7.1.0",
     "stylelint": "^9.9.0",
     "stylelint-config-prettier": "^4.0.0",
