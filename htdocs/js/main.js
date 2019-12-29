@@ -1,3 +1,23 @@
+var getCssVariables = function (customProperty) {
+    var root = document.documentElement;
+    return getComputedStyle(root).getPropertyValue(customProperty);
+};
+var breakpoints = {
+    sm: getCssVariables('--breakpoint-sm'),
+    md: getCssVariables('--breakpoint-md'),
+    lg: getCssVariables('--breakpoint-lg')
+};
+var mq = window.matchMedia("(min-width: " + breakpoints.md + ")");
+var handleWindowChange = function (mq) {
+    if (mq.matches) {
+        // 画面幅 768px 以上の処理
+    }
+    else {
+        // 画面幅 768px 未満の処理
+    }
+};
+handleWindowChange(mq);
+mq.addListener(handleWindowChange);
 var loader = (function () {
     var loader = document.querySelector('.js-loader');
     var target = loader.dataset.target;

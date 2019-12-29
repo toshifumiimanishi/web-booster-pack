@@ -1,3 +1,26 @@
+const getCssVariables = (customProperty: string) => {
+  const root = document.documentElement;
+  return getComputedStyle(root).getPropertyValue(customProperty);
+};
+
+const breakpoints = {
+  sm: getCssVariables('--breakpoint-sm'),
+  md: getCssVariables('--breakpoint-md'),
+  lg: getCssVariables('--breakpoint-lg')
+};
+
+const mq = window.matchMedia(`(min-width: ${breakpoints.md})`);
+const handleWindowChange = mq => {
+  if (mq.matches) {
+    // 画面幅 768px 以上の処理
+  } else {
+    // 画面幅 768px 未満の処理
+  }
+};
+
+handleWindowChange(mq);
+mq.addListener(handleWindowChange);
+
 const loader = (() => {
   const loader: HTMLElement = document.querySelector('.js-loader');
   const target = loader.dataset.target;
