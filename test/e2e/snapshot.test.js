@@ -26,6 +26,7 @@ describe('視覚回帰テスト', () => {
         username,
         password
       });
+      url = url.replace('index.html', '');
       await page.goto(url);
       await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: 'dark' }])
       const viewportHeight = page.viewport().height;
