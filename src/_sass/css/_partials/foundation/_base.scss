@@ -27,6 +27,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: 0;
+  background: transparent;
+}
+
 // アクセシビリティ対応｜iPhone の「視差効果を減らす」に設定しているユーザーに対して、アニメーションを無効にする。
 @media (prefers-reduced-motion: reduce) {
   * {
