@@ -13,6 +13,7 @@ const cssnano = require('cssnano');
 const cssDeclarationSorter = require('css-declaration-sorter');
 const stylelint = require('stylelint');
 const reporter = require('postcss-reporter');
+const babel = require('gulp-babel');
 const ts = require('gulp-typescript');
 const tsProject = ts.createProject('tsconfig.json');
 const eslint = require('gulp-eslint');
@@ -29,7 +30,11 @@ const paths = {
     dest: 'htdocs/'
   },
   scripts: {
-    src: ['src/_ts/**/*.ts', '!' + 'src/_ts/js/entry.ts'],
+    src: [
+      'src/_ts/**/*.ts',
+      '!' + 'src/_ts/js/entry.ts',
+      '!' + 'src/_ts/js/**/_*.ts'
+    ],
     dest: 'htdocs/'
   }
 };
@@ -104,6 +109,12 @@ function scripts() {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(tsProject())
+    .pipe(babel({
+      presets: [
+        '@babel/env',
+        '@babel/preset-typescript'
+      ]
+    }))
     .pipe(gulp.dest(paths.scripts.dest,  { sourcemaps: isSourcemaps }))
     .pipe(browserSync.stream());
 }
