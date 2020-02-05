@@ -109,12 +109,7 @@ function scripts() {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(tsProject())
-    .pipe(babel({
-      presets: [
-        '@babel/env',
-        '@babel/preset-typescript'
-      ]
-    }))
+    .pipe(babel())
     .pipe(gulp.dest(paths.scripts.dest,  { sourcemaps: isSourcemaps }))
     .pipe(browserSync.stream());
 }

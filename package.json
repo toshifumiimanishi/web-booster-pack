@@ -51,6 +51,7 @@
     "prettier": "^1.15.3",
     "puppeteer": "^2.0.0",
     "rollup": "^1.6.0",
+    "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-plugin-terser": "^4.0.4",
@@ -75,7 +76,7 @@
     "not dead"
   ],
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
+    "core-js": "3",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-order": "^3.1.1"
   }
