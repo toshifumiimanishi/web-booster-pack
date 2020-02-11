@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @function breakpoint-next($name, $breakpoint-names: map-keys($breakpoints)) {
   $n: index($breakpoint-names, $name);
   @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
@@ -17,4 +19,14 @@
 
 @function vw($pixel, $viewport: 750) {
   @return $pixel * 100 / $viewport * 1vw;
+}
+
+@function to-rad($deg) {
+  @return $deg * math.$pi / 180;
+}
+
+@function expand-for-skew($deg, $width: 1280) {
+  $rad: to-rad($deg);
+  $height: $width / 2 * math.tan($rad);
+  @return math.percentage($height / $width);
 }
