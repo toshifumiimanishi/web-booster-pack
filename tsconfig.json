@@ -2,6 +2,12 @@
   "compilerOptions": {
     "target": "esnext",
     "moduleResolution": "node",
-    "sourceMap": true
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "strictBindCallApply": false,
+    "strictPropertyInitialization": false,
+    "noImplicitThis": false
   }
 }
