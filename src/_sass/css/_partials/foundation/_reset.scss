@@ -38,7 +38,7 @@ input[type="number"] {
 }
 
 input[type="search"] {
-  -webkit-appearance: textfield;
+  -webkit-appearance: none;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -122,6 +122,19 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
   border: 0;
+}
+
+button {
+  border: 0;
+  background: transparent;
+}
+
+[type="text"],
+[type="number"],
+[type="search"],
+textarea {
+  border: 0;
+  -webkit-appearance: none;
 }
 
 input {
