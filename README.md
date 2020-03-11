@@ -24,4 +24,5 @@ npm run e2e
 
 ブレークポイントの設計は、[Bootstrap](https://getbootstrap.com/) を参考にしています。
 
-![image](https://user-images.githubusercontent.com/13635766/76406574-4b3dac80-63cd-11ea-9dac-a8b0ed0ebfc8.png)
+![69884221-ac5bdb80-131a-11ea-933e-d5fd476fcd02](https://user-images.githubusercontent.com/13635766/76409347-9954af00-63d1-11ea-8def-ba40cb6c9ab6.png)
+
