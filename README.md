@@ -19,3 +19,9 @@ npm run build
 ```
 npm run e2e
 ```
+
+### Breakpoint design
+
+ブレークポイントの設計は、[Bootstrap](https://getbootstrap.com/) を参考にしています。
+
+![image](https://user-images.githubusercontent.com/13635766/76406574-4b3dac80-63cd-11ea-9dac-a8b0ed0ebfc8.png)
