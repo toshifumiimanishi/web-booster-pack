@@ -10,7 +10,7 @@ const loader = (() => {
   };
 
   return {
-    init: _init
+    init: _init,
   };
 })();
 
@@ -45,13 +45,13 @@ const drawer = (() => {
   };
 
   return {
-    init: _init
+    init: _init,
   };
 })();
 
 drawer.init();
 
-const modal = (function() {
+const modal = (function () {
   const toggleButton = document.querySelectorAll('.js-toggle-modal');
   let currentScrollY = 0;
 
@@ -64,7 +64,7 @@ const modal = (function() {
       _launch(target);
     });
 
-    dismissButton.forEach(element => {
+    dismissButton.forEach((element) => {
       element.addEventListener('click', () => {
         _dismiss(target);
       });
@@ -74,7 +74,7 @@ const modal = (function() {
       _dismiss(target);
     });
 
-    dialog.addEventListener('click', event => {
+    dialog.addEventListener('click', (event) => {
       event.stopPropagation();
     });
 
