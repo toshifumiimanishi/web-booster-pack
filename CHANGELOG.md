@@ -1,3 +1,8 @@
+## 2.0.0
+
+- コンポーネントの削除
+  - 削除したコンポーネントは [website-framework](https://github.com/toshifumiimanishi/website-framework) に移行しました。
+
 ## 1.3.0
 
 - Puppeteer 3.0.0 のアップグレード
