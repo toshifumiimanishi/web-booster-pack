@@ -55,23 +55,6 @@ $breakpoints: (
   lg: 1280px,
 ) !default;
 
-$btn-color: $color-white !default;
-$btn-bg-color: $color-black !default;
-
-$btn-primary-color: $color-white !default;
-$btn-primary-bg-color: $color-blue !default;
-
-$btn-outline-border-color: $color-red !default;
-$btn-outline-bg-color: $color-red !default;
-
-$btn-primary-outline-border-color: $color-blue !default;
-
-$btn-line-height: 1.4 !default;
-$btn-border-width: 2px !default;
-
-$modal-dialog-bg: $color-white !default;
-$modal-backdrop: $color-black !default;
-
 $zindex-overlay: 1000 !default;
 $zindex-tooltip: 1001 !default;
 $zindex-carousel: 1002 !default;
@@ -80,14 +63,3 @@ $zindex-sticky: 1004 !default;
 $zindex-drawer: 1005 !default;
 $zindex-modal: 1006 !default;
 $zindex-loader: 1007 !default;
-
-$modal-offset-x: 20px; // モーダルウィンドウの左右の余白
-$modal-offset-top: 64px; // モーダルウィンドウの上の余白（コンテンツ内の要素が画面の高さを超えた場合に適用される）
-
-$drawer-bg-color: $color-black-light !default;
-$drawer-backdrop-bg-color: $color-black !default;
-$drawer-transition-duration: 0.75s;
-
-$spinner-border-color: $color-red !default;
-
-$loader-bg-color: $color-black-light !default;
