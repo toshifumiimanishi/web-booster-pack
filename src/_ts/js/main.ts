@@ -1,21 +1,3 @@
-const loader = (() => {
-  const loader: HTMLElement = document.querySelector('.js-loader');
-  const target = loader.dataset.target;
-
-  const _init = () => {
-    window.addEventListener('load', () => {
-      loader.setAttribute('aria-hidden', 'true');
-      document.querySelector(target).setAttribute('aria-busy', 'false');
-    });
-  };
-
-  return {
-    init: _init,
-  };
-})();
-
-loader.init();
-
 const drawer = (() => {
   const toggle = document.querySelector('.js-drawer');
   const dismiss = document.querySelector('.js-drawer-dismiss');
