@@ -55,9 +55,6 @@ $breakpoints: (
   lg: 1280px,
 ) !default;
 
-$modal-dialog-bg: $color-white !default;
-$modal-backdrop: $color-black !default;
-
 $zindex-overlay: 1000 !default;
 $zindex-tooltip: 1001 !default;
 $zindex-carousel: 1002 !default;
@@ -66,9 +63,6 @@ $zindex-sticky: 1004 !default;
 $zindex-drawer: 1005 !default;
 $zindex-modal: 1006 !default;
 $zindex-loader: 1007 !default;
-
-$modal-offset-x: 20px; // モーダルウィンドウの左右の余白
-$modal-offset-top: 64px; // モーダルウィンドウの上の余白（コンテンツ内の要素が画面の高さを超えた場合に適用される）
 
 $drawer-bg-color: $color-black-light !default;
 $drawer-backdrop-bg-color: $color-black !default;
