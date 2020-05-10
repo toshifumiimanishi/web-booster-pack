@@ -1,3 +1,8 @@
+## 2.2.0
+
+- [rollup-plugin-commonjs](https://github.com/rollup/rollup-plugin-commonjs) → [@rollup/plugin-commonjs](https://github.com/rollup/plugins/tree/master/packages/commonjs) へ変更
+- Rollup の監視モードが正しく動作しない問題の解消
+
 ## 2.1.1
 
 - Website Boilerplate の概要、技術スタックの追記
