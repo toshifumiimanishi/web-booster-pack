@@ -11,7 +11,7 @@ Website Boilerplate とは、静的な Web サイトを開発するためのボ�
 | テストフレームワーク | Jest + Puppeteer |
 | その他周辺技術 | EditorConfig / stylelint / ESLint / Prettier |
 
-### What's included
+## What's included
 
 各ディレクトリ / ファイルの役割を下記に示します。
 
@@ -63,16 +63,17 @@ website-boilerplate/
 └── tsconfig.json ... TypeScript の設定ファイル
 ```
 
-### Documentation
+## Documentation
 
 Website Boilerplate の詳細は[公式ドキュメント](https://toshifumiimanishi.github.io/website-boilerplate/overview/)をチェックしてください。
 
-### Get Started
+## Get Started
 以下のコマンドでパッケージをインストールしてください。
 ```
 npm install
 ```
-### Usage
+
+## Usage
 以下のコマンドで開発用サーバーの起動 + 自動コンパイルを実行します。
 ```
 npm run dev
