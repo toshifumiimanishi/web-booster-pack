@@ -1,5 +1,16 @@
 # Overview
 
+Website Boilerplate とは、静的な Web サイトを開発するためのボイラープレートです。主にフロントエンドの周辺技術をターゲットに整備しています。具体的な技術スタックは以下の通りです。
+
+| 区分 | 技術スタック |
+| --- | --- |
+| 言語 | HTML / EJS / CSS / Sass / PostCSS / JavaScript / TypeScript |
+| タスクランナー | gulp |
+| モジュールバンドラ | rollup.js |
+| トランスパイラ | Babel |
+| テストフレームワーク | Jest + Puppeteer |
+| その他周辺技術 | EditorConfig / stylelint / ESLint / Prettier |
+
 ## Breakpoints design
 
 CSS のメディアクエリは、レスポンシブ Web デザインを利用したデバイスに合わせたデザインを作ることができます。当ボイラープレートは標準でブレークポイントを用意しています。ブレークポイントの設定は自由に編集できます。具体的には `_variables.scss` の `$breakpoints` マップを変更してください。デフォルトのブレークポイントは以下の通りです。
@@ -29,6 +40,6 @@ ESLint と Prettier を併用するには、[`eslint-config-prettier`](https://g
 - eslint-config-prettier： Prettier と競合するルールを無効にするためのプラグイン
 - eslint-plugin-prettier： Prettier 経由でコードを整形するためのルールを追加するプラグイン
 
-ESLint 以外にも TSLint や Stylelint のようなリンターと併用するための方法は [Prettier の公式ドキュメント](https://prettier.io/docs/en/integrating-with-linters.html)に記載されています。
+ESLint 以外にも TSLint や stylelint のようなリンターと併用するための方法は [Prettier の公式ドキュメント](https://prettier.io/docs/en/integrating-with-linters.html)に記載されています。
 
-ちなみに、当テンプレートの TypeScript のリンターは TSLint ではなく ESLint を利用します。理由は TSLint 開発チームが ESLint のプラグインとして TSLint の機能を統合していく [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) プロジェクトを開始し、TSLint は非推奨となりました。
+ちなみに、当ボイラープレートの TypeScript のリンターは TSLint ではなく ESLint を利用します。理由は TSLint 開発チームが ESLint のプラグインとして TSLint の機能を統合していく [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) プロジェクトを開始し、TSLint は非推奨となりました。
