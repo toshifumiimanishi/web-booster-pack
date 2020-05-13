@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@use "sass:meta";
+@import "partials/variables";
+@import "partials/function";
+@import "partials/mixins/**";
+@import "partials/foundation/reset";
+@import "partials/foundation/base";
+@import "partials/helpers/**";
+@import "partials/utilities";
+
+// テスト駆動マークアップ用スタイルシート
+:root {
+  @if $mode == "development" {
+    @include meta.load-css("partials/test");
+  }
+}

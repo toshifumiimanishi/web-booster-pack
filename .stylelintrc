@@ -8,7 +8,7 @@
     "stylelint-prettier/recommended",
     "stylelint-config-rational-order"
   ],
-  "ignoreFiles": "src/_sass/css/_partials/_test.scss",
+  "ignoreFiles": "src/sass/css/partials/_test.scss",
   "rules": {
     "string-quotes": "double",
     "selector-pseudo-element-colon-notation": "double",

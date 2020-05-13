@@ -7,7 +7,7 @@ import { eslint } from 'rollup-plugin-eslint';
 const isProduction = process.env.NODE_ENV === 'production';
 
 export default (async () => ({
-  input: 'src/_ts/js/entry.ts',
+  input: 'src/ts/js/entry.ts',
   output: {
     file: 'htdocs/js/bundle.js',
     format: 'umd',

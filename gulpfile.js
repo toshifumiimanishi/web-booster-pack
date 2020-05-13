@@ -22,18 +22,18 @@ const fs = require('fs');
 sass.compiler = require('sass');
 const paths = {
   markup: {
-    src: ['src/_ejs/**/*.ejs', '!' + 'src/_ejs/**/_*.ejs'],
+    src: ['src/ejs/**/*.ejs', '!' + 'src/ejs/**/_*.ejs'],
     dest: 'htdocs/'
   },
   styles: {
-    src: 'src/_sass/**/*.scss',
+    src: 'src/sass/**/*.scss',
     dest: 'htdocs/'
   },
   scripts: {
     src: [
-      'src/_ts/**/*.ts',
-      '!' + 'src/_ts/js/entry.ts',
-      '!' + 'src/_ts/js/**/_*.ts'
+      'src/ts/**/*.ts',
+      '!' + 'src/ts/js/entry.ts',
+      '!' + 'src/ts/js/**/_*.ts'
     ],
     dest: 'htdocs/'
   }
@@ -41,8 +41,8 @@ const paths = {
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 function markup() {
-  const meta = JSON.parse(fs.readFileSync('src/_ejs/_data/_meta.json'));
-  const config = JSON.parse(fs.readFileSync('src/_ejs/_data/_config.json'));
+  const meta = JSON.parse(fs.readFileSync('src/ejs/data/_meta.json'));
+  const config = JSON.parse(fs.readFileSync('src/ejs/data/_config.json'));
   const sitedata = {...meta, ...config};
   const onError = function (err) {
     console.log(err.message);
@@ -52,14 +52,14 @@ function markup() {
   return gulp.src(paths.markup.src)
     .pipe(data(function(file) {
       const filename = file.path;
-      const absolutePath = filename.split('_ejs/')[filename.split('_ejs/').length -1].replace('.ejs','.html');
+      const absolutePath = filename.split('ejs/')[filename.split('ejs/').length -1].replace('.ejs','.html');
       const relativePath = '../'.repeat([absolutePath.split('/').length -1]);
 
       sitedata.path.relative = relativePath;
       return sitedata;
     }))
     .pipe(ejs({
-      'root': 'src/_ejs/',
+      'root': 'src/ejs/',
       'sitedata': sitedata
     }).on('error', onError))
     .pipe(rename({extname: '.html'}))
@@ -115,7 +115,7 @@ function scripts() {
 }
 
 function watch() {
-  gulp.watch('src/_ejs/**/*.{ejs, json}', markup);
+  gulp.watch('src/ejs/**/*.{ejs, json}', markup);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch('htdocs/**/*.html').on('change', browserSync.reload);
