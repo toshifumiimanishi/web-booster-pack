@@ -24,6 +24,10 @@
   $min: breakpoint-min($lower);
   $max: breakpoint-max($upper);
 
+  @if $min != null and $max !=null and $min > $max {
+    @error "`#{breakpoint-between($lower, $upper)}` 引数の大小関係が逆で指定されています。";
+  }
+
   @if $min != null and $max != null {
     @media (min-width: $min) and (max-width: $max) {
       @content;
@@ -41,7 +45,7 @@
 
 @mixin breakpoint-only($name) {
   $min: breakpoint-min($name);
-  $max: breakpoint-max($name);
+  $max: breakpoint-max(breakpoint-next($name, $breakpoints));
 
   @if $min != null and $max !=null {
     @media (min-width: $min) and (max-width: $max) {
@@ -52,7 +56,7 @@
       @content;
     }
   } @else if $min == null {
-    @include breakpoint-down($name) {
+    @include breakpoint-down(breakpoint-next($name, $breakpoints)) {
       @content;
     }
   }
