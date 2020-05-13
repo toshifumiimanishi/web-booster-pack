@@ -13,8 +13,6 @@
   @return if($min != 0, $min, null);
 }
 
-// 現在（2018/5/13）の Safari のバグにより 0.01px ではなく 0.02px を使用します。
-// https://bugs.webkit.org/show_bug.cgi?id=178261
 @function breakpoint-max($name) {
   $max: map-get($breakpoints, $name);
   @return if($max and $max > 0, $max - 0.02px, null);
