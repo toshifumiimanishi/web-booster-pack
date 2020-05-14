@@ -1,7 +1,10 @@
 @use "sass:math";
 
-@function breakpoint-next($name, $breakpoint-names: map-keys($breakpoints)) {
+@function breakpoint-next($name, $breakpoints: $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
   $n: index($breakpoint-names, $name);
+  @if not $n {
+    @error "breakpoint `#{$name}` not found in `#{$breakpoints}`";
+  }
   @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
 }
 
@@ -10,11 +13,9 @@
   @return if($min != 0, $min, null);
 }
 
-// 現在（2018/5/13）の Safari のバグにより 0.01px ではなく 0.02px を使用する。
-// https://bugs.webkit.org/show_bug.cgi?id=178261
 @function breakpoint-max($name) {
-  $next: breakpoint-next($name);
-  @return if($next, breakpoint-min($next) - 0.02px, null);
+  $max: map-get($breakpoints, $name);
+  @return if($max and $max > 0, $max - 0.02px, null);
 }
 
 @function vw($pixel, $viewport: 750) {
