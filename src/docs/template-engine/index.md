@@ -1,8 +1,10 @@
-# Components
+# Template Engine
+
+テンプレートエンジンは [EJS](https://ejs.co/) を利用します。EJS は HTML ベースの構文で可読性があり、シンプルな機能を兼ね備えた軽量なテンプレートエンジンです。EJS には include 機能があります。当ボイラープレートには、あらかじめ用意した include ファイルを以下に示します。
 
 ## Breadcrumb
 
-パンくずリストのインクルードの例を以下に示す。
+パンくずリストのインクルードの例を以下に示します。
 
 ```
 <%- include(sitedata.path.relative + '_partials/_breadcrumb', {breadcrumbList: ['第二階層', '第三階層'], breadcrumbLink: ['/standards/example.html', '/example.html']}) %>
@@ -29,6 +31,8 @@
 </nav>
 ```
 
+::: tip Column
 ### Microdata vs JSON-LD
 
-Google は、構造化データには JSON-LD の使用を推奨している。しかし、テンプレートエンジンに構造化データを組み込む際、`script` 要素に構造化データを切り離す JSON-LD より Microdata のほうが都合がよい。
+Google は構造化データには JSON-LD の使用を推奨しています。しかし、テンプレートエンジンに構造化データを組み込む際、`script` 要素に構造化データを切り離す JSON-LD より Microdata のほうが都合がよいかと思います。
+:::

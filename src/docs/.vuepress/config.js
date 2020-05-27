@@ -9,13 +9,11 @@ module.exports = {
   },
   themeConfig: {
     nav: [
-      { text: 'Overview', link: '/overview/'},
-      { text: 'Components', link: '/components/'},
       { text: 'GitHub', link: 'https://github.com/toshifumiimanishi/website-boilerplate'}
     ],
     sidebar: [
       '/overview/',
-      '/components/',
+      '/template-engine/',
     ]
   }
 }
