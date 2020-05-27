@@ -63,3 +63,78 @@ $zindex-sticky: 1004 !default;
 $zindex-drawer: 1005 !default;
 $zindex-modal: 1006 !default;
 $zindex-loader: 1007 !default;
+
+$utilities: (
+  "text-align": (
+    class: text-align,
+    property: text-align,
+    values: left right center justify,
+    flag: false,
+  ),
+  "position": (
+    class: position,
+    property: position,
+    values: static relative absolute fixed sticky,
+    flag: false,
+  ),
+  "font-weight": (
+    class: font-weight,
+    property: font-weight,
+    values: normal bold,
+    flag: false,
+  ),
+  "display": (
+    class: display,
+    property: display,
+    values: none block inline-block table table-cell flex inline-flex,
+    flag: false,
+  ),
+  "margin-top": (
+    class: mt,
+    property: margin-top,
+    values: 0,
+    flag: false,
+  ),
+  "margin-right": (
+    class: mr,
+    property: margin-right,
+    values: 0,
+    flag: false,
+  ),
+  "margin-bottom": (
+    class: mb,
+    property: margin-bottom,
+    values: 0,
+    flag: false,
+  ),
+  "margin-left": (
+    class: ml,
+    property: margin-left,
+    values: 0,
+    flag: false,
+  ),
+  "padding-top": (
+    class: pt,
+    property: padding-top,
+    values: 0,
+    flag: false,
+  ),
+  "padding-right": (
+    class: pr,
+    property: padding-right,
+    values: 0,
+    flag: false,
+  ),
+  "padding-bottom": (
+    class: pb,
+    property: padding-bottom,
+    values: 0,
+    flag: false,
+  ),
+  "padding-left": (
+    class: pl,
+    property: padding-left,
+    values: 0,
+    flag: false,
+  ),
+) !default;

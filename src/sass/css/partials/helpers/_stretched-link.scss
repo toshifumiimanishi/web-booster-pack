@@ -1,3 +1,5 @@
+@use "../mixins/_stretched-link" as *;
+
 .stretched-link {
   @include stretched-link();
 }

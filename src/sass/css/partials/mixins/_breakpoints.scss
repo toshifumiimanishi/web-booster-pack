@@ -1,3 +1,6 @@
+@use "../variables" as *;
+@use "../functions" as *;
+
 @mixin breakpoint-up($name) {
   $min: breakpoint-min($name);
   @if $min {

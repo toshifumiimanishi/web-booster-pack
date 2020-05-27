@@ -1,3 +1,6 @@
+@use "../variables" as *;
+@use "../mixins/breakpoints" as *;
+
 :root {
   @each $breakpoint, $value in $breakpoints {
     --breakpoint-#{$breakpoint}: #{$value};

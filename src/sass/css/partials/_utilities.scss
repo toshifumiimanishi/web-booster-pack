@@ -1,95 +1,16 @@
-.position-relative {
-  position: relative !important;
-}
+@use "./variables" as *;
+@use "./mixins/breakpoints" as *;
 
-.position-absolute {
-  position: absolute !important;
-}
-
-.position-fixed {
-  position: fixed !important;
-}
-
-.text-left {
-  text-align: left !important;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.text-right {
-  text-align: right !important;
-}
-
-.font-size-xl {
-  font-size: 1.8em !important;
-}
-
-.font-size-lg {
-  font-size: 1.4em !important;
-}
-
-.font-size-md {
-  font-size: 0.6em !important;
-}
-
-.font-size-sm {
-  font-size: 0.4em !important;
-}
-
-.font-size-xs {
-  font-size: 0.2em !important;
-}
-
-.font-weight-bold {
-  font-weight: bold !important;
-}
-
-.font-weight-normal {
-  font-weight: normal !important;
-}
-
-.d-block {
-  display: block !important;
-}
-
-.d-block {
-  display: block !important;
-}
-
-.d-inline-block {
-  display: block !important;
-}
-
-.pt-0 {
-  padding-top: 0 !important;
-}
-
-.pr-0 {
-  padding-right: 0 !important;
-}
-
-.pb-0 {
-  padding-bottom: 0 !important;
-}
-
-.pl-0 {
-  padding-left: 0 !important;
-}
-
-.pt-1em {
-  padding-top: 1em !important;
-}
-
-.pr-1em {
-  padding-right: 1em !important;
-}
-
-.pb-1em {
-  padding-bottom: 1em !important;
-}
-
-.pl-1em {
-  padding-left: 1em !important;
+@each $key, $utility in $utilities {
+  @if map-get($utility, flag) {
+    @each $breakpoint in map-keys($breakpoints) {
+      @include breakpoint-only($breakpoint) {
+        @each $value in map-get($utility, values) {
+          .#{map-get($utility, class)}-#{$value}-#{$breakpoint} {
+            #{map-get($utility, property)}: $value !important;
+          }
+        }
+      }
+    }
+  }
 }

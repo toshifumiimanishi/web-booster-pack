@@ -46,7 +46,7 @@ website-boilerplate/
 │   ├── sass/ ... Sass 関連のコード一式
 │   │   └── css/
 │   │       ├── partials/ ... Sass パーシャルファイル格納用ディレクトリ
-│   │       │   ├── _function.scss ... Sass 関数を管理するファイル
+│   │       │   ├── _functions.scss ... Sass 関数を管理するファイル
 │   │       │   ├── _test.scss ... テスト駆動マークアップ用ファイル
 │   │       │   ├── _utilities.scss ... 僅かなスタイル調整のための便利クラスを定義するファイル
 │   │       │   ├── _variables.scss ... 変数を管理するファイル
