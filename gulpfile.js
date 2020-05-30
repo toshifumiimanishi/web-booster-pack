@@ -3,7 +3,6 @@ const ejs = require('gulp-ejs');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
-const sassGlob = require('gulp-sass-glob');
 const sassVariables = require('gulp-sass-variables');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -91,7 +90,6 @@ function styles() {
     .pipe(sassVariables({
       $mode: process.env.NODE_ENV
     }))
-    .pipe(sassGlob())
     .pipe(sass({
       outputStyle: 'expanded',
       includePaths: ['node_modules/'],
@@ -127,7 +125,7 @@ function serve() {
     server: {
       baseDir: "htdocs"
     },
-    open: 'external'
+    open: false
   });
 }
 
