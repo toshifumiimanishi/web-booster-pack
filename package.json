@@ -43,7 +43,6 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sass-glob": "^1.0.9",
     "gulp-sass-variables": "^1.2.0",
     "gulp-typescript": "^5.0.1",
     "jest": "^24.7.1",
