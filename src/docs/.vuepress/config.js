@@ -14,6 +14,7 @@ module.exports = {
     sidebar: [
       '/overview/',
       '/template-engine/',
+      '/css-preprocessor/',
     ]
   }
 }
