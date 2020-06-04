@@ -3,6 +3,7 @@
 - Redesign breakpoints
 - 開発用ディレクトリのリネーム
 - Sass Modules System の導入
+- Sass Variables に IE サポートフラグの設定
 - TypeScript、ESLint の設定変更
   - 厳格な型チェック
   - 列挙型を非推奨にする
