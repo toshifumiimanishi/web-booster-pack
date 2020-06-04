@@ -2,6 +2,18 @@
 
 テンプレートエンジンは [EJS](https://ejs.co/) を利用します。EJS は HTML ベースの構文で可読性があり、シンプルな機能を兼ね備えた軽量なテンプレートエンジンです。EJS には include 機能があります。当ボイラープレートには、あらかじめ用意した include ファイルを以下に示します。
 
+## Metadata
+
+HTML のメタ情報を管理するためのパーシャルファイルになります。パーシャルファイルはファイル名の先頭に _（アンダースコア）を慣習的につけます。メタ情報のデータは `data/_meta.json` で管理します。ローカル変数 `page` は `data/_meta.json` で管理されているページ名を参照します。
+
+```
+<%- include(sitedata.path.relative + 'partials/_meta', {page: 'top'})%>
+```
+
+::: tip Column
+`og:type` はトップページに `website`、下層ページに `article` を指定することが慣例です。
+:::
+
 ## Breadcrumb
 
 パンくずリストのインクルードの例を以下に示します。
