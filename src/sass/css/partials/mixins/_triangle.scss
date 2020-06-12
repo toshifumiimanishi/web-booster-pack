@@ -1,0 +1,41 @@
+@use "sass:list";
+
+@mixin triangle($direction, $color: currentcolor, $base: 1em, $height: 1em, $pseudo-element: before) {
+  @if not list.index(top right bottom left, $direction) {
+    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+  }
+
+  @if not list.index(before after, $pseudo-element) {
+    @error "Direction must be either `before` or `after`.";
+  }
+
+  $base-half: $base / 2;
+
+  &::#{$pseudo-element} {
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    content: "";
+
+    @if $direction == top {
+      border-color: transparent transparent $color transparent;
+      border-width: 0 $base-half $height $base-half;
+    }
+
+    @if $direction == right {
+      border-color: transparent transparent transparent $color;
+      border-width: $base-half 0 $base-half $height;
+    }
+
+    @if $direction == bottom {
+      border-color: $color transparent transparent transparent;
+      border-width: $height $base-half 0 $base-half;
+    }
+
+    @if $direction == left {
+      border-color: transparent $color transparent transparent;
+      border-width: $base-half $height $base-half 0;
+    }
+  }
+}
