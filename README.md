@@ -38,15 +38,15 @@ website-boilerplate/
 ├── package.json
 ├── rollup.config.js ... rollup.js の設定ファイル
 ├── src ... 開発用ディレクトリ
-│   ├── _docs/
-│   ├── _ejs/ ... EJS 関連のコード一式
-│   │   ├── _data/ ... メタ情報やパーシャルファイルの設定情報を JSON ファイル形式で管理するディレクトリ
-│   │   ├── _partials/ ... EJS パーシャルファイル格納用ディレクトリ
+│   ├── docs/
+│   ├── ejs/ ... EJS 関連のコード一式
+│   │   ├── data/ ... メタ情報やパーシャルファイルの設定情報を JSON ファイル形式で管理するディレクトリ
+│   │   ├── partials/ ... EJS パーシャルファイル格納用ディレクトリ
 │   │   └── index.ejs
-│   ├── _sass/ ... Sass 関連のコード一式
+│   ├── sass/ ... Sass 関連のコード一式
 │   │   └── css/
-│   │       ├── _partials/ ... Sass パーシャルファイル格納用ディレクトリ
-│   │       │   ├── _function.scss ... Sass 関数を管理するファイル
+│   │       ├── partials/ ... Sass パーシャルファイル格納用ディレクトリ
+│   │       │   ├── _functions.scss ... Sass 関数を管理するファイル
 │   │       │   ├── _test.scss ... テスト駆動マークアップ用ファイル
 │   │       │   ├── _utilities.scss ... 僅かなスタイル調整のための便利クラスを定義するファイル
 │   │       │   ├── _variables.scss ... 変数を管理するファイル
@@ -54,7 +54,7 @@ website-boilerplate/
 │   │       │   ├── helpers/ ... ヘルパークラス用ディレクトリ
 │   │       │   └── mixins/ ... ミックスインを管理するディレクトリ
 │   │       └── main.scss
-│   └── _ts/ ... TypeScript 関連のコード一式
+│   └── ts/ ... TypeScript 関連のコード一式
 │       └── js/
 │           ├── entry.ts ... rollup.js のエントリーファイル
 │           └── modules/ ... モジュールファイル格納用ディレクトリ

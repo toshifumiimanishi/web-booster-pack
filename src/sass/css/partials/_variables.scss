@@ -1,0 +1,142 @@
+$ie-support: false !default;
+
+$linear: cubic-bezier(0.25, 0.25, 0.75, 0.75) !default;
+$ease: cubic-bezier(0.25, 0.1, 0.25, 1) !default;
+$ease-in: cubic-bezier(0.42, 0, 1, 1) !default;
+$ease-out: cubic-bezier(0, 0, 0.58, 1) !default;
+$ease-in-out: cubic-bezier(0.42, 0, 0.58, 1) !default;
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53) !default;
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22) !default;
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06) !default;
+$easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715) !default;
+$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035) !default;
+$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335) !default;
+$easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045) !default;
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94) !default;
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1) !default;
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1) !default;
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1) !default;
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1) !default;
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1) !default;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275) !default;
+$easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955) !default;
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+$easeInOutQuart: cubic-bezier(0.77, 0, 0.275, 1) !default;
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1) !default;
+$easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95) !default;
+$easeInOutExpo: cubic-bezier(1, 0, 0, 1) !default;
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86) !default;
+$easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55) !default;
+
+$color-white: #fff !default;
+$color-black: #000 !default;
+$color-black-light: #353535 !default;
+$color-blue: #007bff !default;
+$color-red: #d24d57 !default;
+
+$base-background-color: $color-white !default;
+$base-font-color: $color-black-light !default;
+$base-font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", "BIZ UDPGothic", Meiryo, sans-serif !default;
+$base-line-height: 1.6875 !default;
+$base-timing-function: ease !default;
+
+$dark-background-color-base: $color-black-light !default;
+$dark-font-color-base: $color-white !default;
+
+$root-font-sizes: (
+  sm: 3.125vw,
+  md: 10px,
+  lg: 10px,
+) !default;
+
+$breakpoints: (
+  sm: 0,
+  md: 768px,
+  lg: 1280px,
+) !default;
+
+$zindex-overlay: 1000 !default;
+$zindex-tooltip: 1001 !default;
+$zindex-carousel: 1002 !default;
+$zindex-dropdown: 1003 !default;
+$zindex-sticky: 1004 !default;
+$zindex-drawer: 1005 !default;
+$zindex-modal: 1006 !default;
+$zindex-loader: 1007 !default;
+
+$utilities: (
+  "text-align": (
+    class: text-align,
+    property: text-align,
+    values: left right center justify,
+    flag: false,
+  ),
+  "position": (
+    class: position,
+    property: position,
+    values: static relative absolute fixed sticky,
+    flag: false,
+  ),
+  "font-weight": (
+    class: font-weight,
+    property: font-weight,
+    values: normal bold,
+    flag: false,
+  ),
+  "display": (
+    class: display,
+    property: display,
+    values: none block inline-block table table-cell flex inline-flex,
+    flag: false,
+  ),
+  "margin-top": (
+    class: mt,
+    property: margin-top,
+    values: 0,
+    flag: false,
+  ),
+  "margin-right": (
+    class: mr,
+    property: margin-right,
+    values: 0,
+    flag: false,
+  ),
+  "margin-bottom": (
+    class: mb,
+    property: margin-bottom,
+    values: 0,
+    flag: false,
+  ),
+  "margin-left": (
+    class: ml,
+    property: margin-left,
+    values: 0,
+    flag: false,
+  ),
+  "padding-top": (
+    class: pt,
+    property: padding-top,
+    values: 0,
+    flag: false,
+  ),
+  "padding-right": (
+    class: pr,
+    property: padding-right,
+    values: 0,
+    flag: false,
+  ),
+  "padding-bottom": (
+    class: pb,
+    property: padding-bottom,
+    values: 0,
+    flag: false,
+  ),
+  "padding-left": (
+    class: pl,
+    property: padding-left,
+    values: 0,
+    flag: false,
+  ),
+) !default;

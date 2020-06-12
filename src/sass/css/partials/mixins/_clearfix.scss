@@ -1,0 +1,13 @@
+@use "../variables" as *;
+
+@mixin clearfix() {
+  @if $ie-support {
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+  } @else {
+    display: flow-root;
+  }
+}

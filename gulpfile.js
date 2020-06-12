@@ -3,7 +3,6 @@ const ejs = require('gulp-ejs');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
-const sassGlob = require('gulp-sass-glob');
 const sassVariables = require('gulp-sass-variables');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -22,18 +21,18 @@ const fs = require('fs');
 sass.compiler = require('sass');
 const paths = {
   markup: {
-    src: ['src/_ejs/**/*.ejs', '!' + 'src/_ejs/**/_*.ejs'],
+    src: ['src/ejs/**/*.ejs', '!' + 'src/ejs/**/_*.ejs'],
     dest: 'htdocs/'
   },
   styles: {
-    src: 'src/_sass/**/*.scss',
+    src: 'src/sass/**/*.scss',
     dest: 'htdocs/'
   },
   scripts: {
     src: [
-      'src/_ts/**/*.ts',
-      '!' + 'src/_ts/js/entry.ts',
-      '!' + 'src/_ts/js/**/_*.ts'
+      'src/ts/**/*.ts',
+      '!' + 'src/ts/js/entry.ts',
+      '!' + 'src/ts/js/**/_*.ts'
     ],
     dest: 'htdocs/'
   }
@@ -41,8 +40,8 @@ const paths = {
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 function markup() {
-  const meta = JSON.parse(fs.readFileSync('src/_ejs/_data/_meta.json'));
-  const config = JSON.parse(fs.readFileSync('src/_ejs/_data/_config.json'));
+  const meta = JSON.parse(fs.readFileSync('src/ejs/data/_meta.json'));
+  const config = JSON.parse(fs.readFileSync('src/ejs/data/_config.json'));
   const sitedata = {...meta, ...config};
   const onError = function (err) {
     console.log(err.message);
@@ -52,14 +51,14 @@ function markup() {
   return gulp.src(paths.markup.src)
     .pipe(data(function(file) {
       const filename = file.path;
-      const absolutePath = filename.split('_ejs/')[filename.split('_ejs/').length -1].replace('.ejs','.html');
+      const absolutePath = filename.split('ejs/')[filename.split('ejs/').length -1].replace('.ejs','.html');
       const relativePath = '../'.repeat([absolutePath.split('/').length -1]);
 
       sitedata.path.relative = relativePath;
       return sitedata;
     }))
     .pipe(ejs({
-      'root': 'src/_ejs/',
+      'root': 'src/ejs/',
       'sitedata': sitedata
     }).on('error', onError))
     .pipe(rename({extname: '.html'}))
@@ -91,7 +90,6 @@ function styles() {
     .pipe(sassVariables({
       $mode: process.env.NODE_ENV
     }))
-    .pipe(sassGlob())
     .pipe(sass({
       outputStyle: 'expanded',
       includePaths: ['node_modules/'],
@@ -115,7 +113,7 @@ function scripts() {
 }
 
 function watch() {
-  gulp.watch('src/_ejs/**/*.{ejs, json}', markup);
+  gulp.watch('src/ejs/**/*.{ejs, json}', markup);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch('htdocs/**/*.html').on('change', browserSync.reload);
@@ -127,7 +125,7 @@ function serve() {
     server: {
       baseDir: "htdocs"
     },
-    open: 'external'
+    open: false
   });
 }
 

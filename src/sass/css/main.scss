@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@use "sass:meta";
+@use "partials/foundation";
+@use "partials/helpers";
+@use "partials/utilities";
+
+// テスト駆動マークアップ用スタイルシート
+:root {
+  @if $mode == "development" {
+    @include meta.load-css("partials/test");
+  }
+}

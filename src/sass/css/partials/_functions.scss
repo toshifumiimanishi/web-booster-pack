@@ -1,0 +1,35 @@
+@use "sass:math";
+@use "sass:list";
+@use "./variables" as *;
+
+@function breakpoint-next($name, $breakpoints: $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+  $n: list.index($breakpoint-names, $name);
+  @if not $n {
+    @error "breakpoint `#{$name}` not found in `#{$breakpoints}`";
+  }
+  @return if($n < list.length($breakpoint-names), list.nth($breakpoint-names, $n + 1), null);
+}
+
+@function breakpoint-min($name) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name) {
+  $max: map-get($breakpoints, $name);
+  @return if($max and $max > 0, $max - 0.02px, null);
+}
+
+@function vw($pixel, $viewport: 750) {
+  @return $pixel * 100 / $viewport * 1vw;
+}
+
+@function to-rad($deg) {
+  @return $deg * math.$pi / 180;
+}
+
+@function expand-for-skew($deg, $width: 1280) {
+  $rad: to-rad($deg);
+  $height: $width / 2 * math.tan($rad);
+  @return math.percentage($height / $width);
+}

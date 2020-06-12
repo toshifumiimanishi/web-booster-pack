@@ -1,3 +1,15 @@
+## 3.0.0
+
+- Redesign breakpoints
+- 開発用ディレクトリのリネーム
+- Sass Modules System の導入
+- Sass Variables に IE サポートフラグの設定
+- Sass Mixins の新規作成
+  - 三角形生成
+- TypeScript、ESLint の設定変更
+  - 厳格な型チェック
+  - 列挙型を非推奨にする
+
 ## 2.2.0
 
 - [rollup-plugin-commonjs](https://github.com/rollup/rollup-plugin-commonjs) → [@rollup/plugin-commonjs](https://github.com/rollup/plugins/tree/master/packages/commonjs) へ変更
