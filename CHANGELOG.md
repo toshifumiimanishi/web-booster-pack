@@ -4,6 +4,8 @@
 - 開発用ディレクトリのリネーム
 - Sass Modules System の導入
 - Sass Variables に IE サポートフラグの設定
+- Sass Mixins の新規作成
+  - 三角形生成
 - TypeScript、ESLint の設定変更
   - 厳格な型チェック
   - 列挙型を非推奨にする
