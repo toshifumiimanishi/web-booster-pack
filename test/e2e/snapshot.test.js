@@ -1,14 +1,15 @@
-const devices = require('puppeteer/DeviceDescriptors');
 const fs = require('fs');
 const path = require('path');
+const puppeteer = require('puppeteer');
+const devices = puppeteer.devices;
 
 describe('視覚回帰テスト', () => {
   const domain = 'http://example.com/';
   const rootPath = path.resolve(__dirname, '../../htdocs');
   const username = '__username__';
   const password = '__password__';
-  const isMobile = false;
-  const device = 'iPhone 7';
+  const isMobile = true;
+  const device = 'iPhone X';
   const { width: deviceWidth, height: deviceHeight } = devices[device].viewport;
   const pageList = getPageList(rootPath);
   const urls = pageList.map(page => domain + page)
