@@ -11,7 +11,7 @@ export default (async () => ({
   output: {
     file: 'htdocs/js/bundle.js',
     format: 'umd',
-    sourcemap: !isProduction
+    sourcemap: true,
   },
   plugins: [
     resolve(),
