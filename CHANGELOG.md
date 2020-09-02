@@ -3,7 +3,8 @@
 - TypeScript 4.0 のアップデート
 - Prettier 2.1 のアップデート
 - Autoprefixer 9.8.6 のアップデート
-- Babel、Rollup や ESLint、及びそれらの依存モジュールのアップデート など
+- Babel、Rollup や ESLint、及びそれらの依存モジュールのアップデート
+- 脆弱性のある依存モジュールの解決 など
 
 ## 3.1.0
 
