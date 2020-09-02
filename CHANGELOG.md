@@ -1,3 +1,10 @@
+## 3.1.1
+
+- TypeScript 4.0 のアップデート
+- Prettier 2.1 のアップデート
+- Autoprefixer 9.8.6 のアップデート
+- Babel、Rollup や ESLint、及びそれらの依存モジュールのアップデート など
+
 ## 3.1.0
 
 - Puppeteer 5.0.0 のアップグレード
