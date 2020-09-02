@@ -1,3 +1,8 @@
+## 3.1.0
+
+- Puppeteer 5.0.0 のアップグレード
+- `require('puppeteer/DeviceDescriptors')` の代替
+
 ## 3.0.0
 
 - Redesign breakpoints
