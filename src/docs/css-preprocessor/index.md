@@ -88,3 +88,8 @@ $breakpoints: (
 ```
 
 なお、当ブレークポイントの設計は CSS フレームワークの [Bootstrap](https://getbootstrap.com/) を参考にしています。
+
+## Variables
+
+`_variables.scss` はプロジェクトのタイポグラフィ、色、ベジェ曲線などの設定を Sass 変数で管理するファイルです。これはデザインシステムの文脈で「デザイントークン」と呼ばれるハードコードされた値に設計と秩序をもたらします。たとえば、色管理には Adobe のデザインシステムである「[Spectrum](https://spectrum.adobe.com/page/design-tokens/)」に倣って Global tokens と Component-specific tokens でトークンを具象化します。  
+`_variables.scss` で管理する Sass 変数にはデザインの具象化以外にも `$root-font-sizes` はルート要素の級数をブラウザのビューポートの幅に基づいて適切なサイズに変更する、ユーティリティマップ（`$utilities`）のフラグのブール値の変更でユーティリティクラスの出力を制御できるなど開発者体験を向上させる機能を有しています。
