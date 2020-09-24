@@ -10,9 +10,7 @@ const breakpoints = {
 };
 
 export const mq = window.matchMedia(`(min-width: ${breakpoints.md})`);
-export const handleWindowChange = (
-  mq: MediaQueryList | MediaQueryListEvent
-): void => {
+export const handleWindowChange = (mq: MediaQueryList | MediaQueryListEvent): void => {
   if (mq.matches) {
     // 画面幅 768px 以上の処理
   } else {
