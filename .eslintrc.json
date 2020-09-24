@@ -5,8 +5,7 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:@typescript-eslint/recommended"
   ],
   "plugins": [
     "@typescript-eslint"
@@ -54,10 +53,6 @@
         "selector": "TSEnumDeclaration",
         "message": "Don't declare enums"
       }
-    ],
-    "prettier/prettier": ["error", {
-      "singleQuote": true,
-      "printWidth": 80
-    }]
+    ]
   }
 }
