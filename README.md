@@ -21,6 +21,7 @@ website-boilerplate/
 ├── .editorconfig ... EditorConfig の設定ファイル
 ├── .eslintrc.json ... ESLint の設定ファイル
 ├── .gitignore ... Git の追跡対象を制御するファイル
+├── .npmrc ... npm の設定ファイル
 ├── .prettierrc ... Prettier の設定ファイル
 ├── .stylelintrc ... stylelint の設定ファイル
 ├── .vscode/ ... VS Code 関連ファイル
