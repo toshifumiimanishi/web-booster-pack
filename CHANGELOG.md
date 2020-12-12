@@ -1,3 +1,8 @@
+## 4.0.0
+
+- Node.js 12 のサポート
+- PostCSS 8 の追加
+- 依存モジュールのアップデート
 ## 3.3.0
 
 - package.json に engines オプションの追加
