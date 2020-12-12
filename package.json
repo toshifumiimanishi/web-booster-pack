@@ -78,6 +78,11 @@
       "./test/e2e/jest-setup-test-framework.js"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format:css & npm run format:js"
+    }
+  },
   "browserslist": [
     "last 2 versions",
     "ie >= 11",
