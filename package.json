@@ -48,9 +48,11 @@
     "gulp-sass": "^4.1.0",
     "gulp-sass-variables": "^1.2.0",
     "gulp-typescript": "^5.0.1",
+    "husky": "^4.3.5",
     "jest": "^26.4.2",
     "jest-image-snapshot": "^4.2.0",
     "jest-puppeteer": "^4.1.1",
+    "lint-staged": "^10.5.3",
     "postcss": "^8.2.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-reporter": "^7.0.2",
@@ -76,6 +78,16 @@
     "setupFilesAfterEnv": [
       "./test/e2e/jest-setup-test-framework.js"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.html": "prettier --write",
+    "*.scss": "stylelint --fix",
+    "*.ts": "eslint --fix"
   },
   "browserslist": [
     "last 2 versions",
