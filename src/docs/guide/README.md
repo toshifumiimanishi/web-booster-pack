@@ -11,7 +11,38 @@ Website Boilerplate とは、静的な Web サイトを開発するためのボ�
 | テストフレームワーク | Jest + Puppeteer |
 | その他周辺技術 | EditorConfig / stylelint / ESLint / Prettier / husky |
 
-## What's included
+## Getting Started
+
+### Prerequisites
+
+- [Node.js 12+](https://nodejs.org/en/)
+
+### Quick Start
+
+以下のコマンドでパッケージをインストールしてください。
+
+```sh
+npm install
+```
+
+以下のコマンドで開発用サーバーの起動 + 自動コンパイルを実行します。
+
+```sh
+npm run dev
+```
+以下のコマンドでビルドします。
+
+```sh
+npm run build
+```
+以下のコマンドで視覚回帰テストを実行します。
+
+```sh
+npm run e2e
+```
+
+
+## Directory Structure
 
 各ディレクトリ / ファイルの役割を下記に示します。
 
@@ -63,26 +94,21 @@ website-boilerplate/
 └── tsconfig.json ... TypeScript の設定ファイル
 ```
 
-## Documentation
+## Why Not ...?
 
-Website Boilerplate の詳細は[公式ドキュメント](https://toshifumiimanishi.github.io/website-boilerplate/guide/)をチェックしてください。
+### ESLint と Prettier の併用
 
-## Get Started
-以下のコマンドでパッケージをインストールしてください。
-```
-npm install
-```
+まずはじめに ESLint と Prettier は役割が異なります。[ESLint](https://eslint.org/) は JavaScript のための静的検証ツールであり、[Prettier](https://prettier.io/) はコードフォーマッターです。 **昨今のフロントエンド開発では両者を併せて利用することを推奨されています。** 実は ESLint にもコード整形機能が備わっているのですが、「餅は餅屋」という言葉があるようにコードフォーマッターである Prettier にコード整形を一任させることでより優れたコード整形を実現できます。
 
-## Usage
-以下のコマンドで開発用サーバーの起動 + 自動コンパイルを実行します。
-```
-npm run dev
-```
-以下のコマンドでビルドします。
-```
-npm run build
-```
-以下のコマンドで視覚回帰テストを実行します。
-```
-npm run e2e
-```
+ESLint と Prettier を併用するには、[`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) と [`eslint-plugin-prettier`](https://github.com/prettier/eslint-plugin-prettier) を利用します。
+
+- eslint-config-prettier： Prettier と競合するルールを無効にするためのプラグイン
+- eslint-plugin-prettier： Prettier 経由でコードを整形するためのルールを追加するプラグイン
+
+ESLint 以外にも TSLint や stylelint のようなリンターと併用するための方法は [Prettier の公式ドキュメント](https://prettier.io/docs/en/integrating-with-linters.html)に記載されています。
+
+ちなみに、当ボイラープレートの TypeScript のリンターは TSLint ではなく ESLint を利用します。理由は TSLint 開発チームが ESLint のプラグインとして TSLint の機能を統合していく [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) プロジェクトを開始し、TSLint は非推奨となりました。
+
+### TypeScript と Babel の役割
+
+[TypeScript](https://www.typescriptlang.org/) には tsc という Microsoft 謹製のトランスパイラがありますが、TypeScript は静的型付けのみに徹し、トランスパイルは [Babel](https://babeljs.io/) を利用しています。Babel は `@babel/preset-typescript` を利用することで TypeScript に対応可能です。
