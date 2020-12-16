@@ -12,9 +12,18 @@ module.exports = {
       { text: 'GitHub', link: 'https://github.com/toshifumiimanishi/website-boilerplate'}
     ],
     sidebar: [
-      '/overview/',
-      '/template-engine/',
-      '/css-preprocessor/',
-    ]
+      {
+        title: 'Guide',
+        path: '/guide/',
+      },
+      {
+        title: 'Usage',
+        collapsable: false,
+        children: [
+          '/usage/template-engine',
+          '/usage/css-preprocessor',
+        ],
+      },
+    ],
   }
 }
