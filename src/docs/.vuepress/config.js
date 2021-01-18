@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Website Boilerplate',
-  base: "/website-boilerplate/",
+  title: 'Web Booster Pack',
+  base: "/web-booster-pack/",
   dest: 'docs',
   locales: {
     '/': {
@@ -9,7 +9,7 @@ module.exports = {
   },
   themeConfig: {
     nav: [
-      { text: 'GitHub', link: 'https://github.com/toshifumiimanishi/website-boilerplate'}
+      { text: 'GitHub', link: 'https://github.com/toshifumiimanishi/web-booster-pack'}
     ],
     sidebar: [
       {

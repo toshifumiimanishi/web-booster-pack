@@ -1,6 +1,6 @@
-## What is Website Boilerplate?
+## What is Web Booster Pack?
 
-Website Boilerplate とは、静的な Web サイトを開発するためのボイラープレートです。主にフロントエンドの周辺技術をターゲットに整備しています。具体的な技術スタックは以下の通りです。
+Web Booster Pack とは、静的な Web サイトを開発するためのボイラープレートです。主にフロントエンドの周辺技術をターゲットに整備しています。具体的な技術スタックは以下の通りです。
 
 | 区分 | 技術スタック |
 | --- | --- |
@@ -47,7 +47,7 @@ npm run e2e
 各ディレクトリ / ファイルの役割を下記に示します。
 
 ```
-website-boilerplate/
+web-booster-pack/
 ├── .circleci/ ... CircleCI 関連ディレクトリ
 ├── .editorconfig ... EditorConfig の設定ファイル
 ├── .eslintrc.json ... ESLint の設定ファイル
