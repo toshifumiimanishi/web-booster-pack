@@ -1,3 +1,9 @@
+## 4.0.0
+
+- Node.js 12 のサポート
+- PostCSS 8 の追加
+- husky、lint-staged の追加
+- 依存モジュールのアップデート
 ## 3.3.0
 
 - package.json に engines オプションの追加
@@ -41,7 +47,7 @@
 
 ## 2.1.1
 
-- Website Boilerplate の概要、技術スタックの追記
+- Web Booster Pack の概要、技術スタックの追記
 - 各ディレクトリ / ファイルの役割の説明文の追記
 
 ## 2.1.0
