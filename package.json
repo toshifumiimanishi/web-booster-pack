@@ -79,11 +79,6 @@
       "./test/e2e/jest-setup-test-framework.js"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.html": "prettier --write",
     "*.scss": "stylelint --fix",
