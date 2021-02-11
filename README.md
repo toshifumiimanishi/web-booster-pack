@@ -18,6 +18,7 @@ Web Booster Pack とは、静的な Web サイトを開発するためのボイ�
 ```
 web-booster-pack/
 ├── .circleci/ ... CircleCI 関連ディレクトリ
+├── .husky/ ... husky 関連ディレクトリ
 ├── .editorconfig ... EditorConfig の設定ファイル
 ├── .eslintrc.json ... ESLint の設定ファイル
 ├── .gitignore ... Git の追跡対象を制御するファイル
