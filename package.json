@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "12.x"
+    "node": ">=12.x <15"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
