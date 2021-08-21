@@ -14,7 +14,7 @@
     "format:css": "stylelint --fix 'src/sass/css/**/*.scss'",
     "format:js": "eslint --fix 'src/ts/js/**/*.ts'",
     "e2e": "jest test/e2e/snapshot.test.js",
-    "preinstall": "typesync || :"
+    "install-with-types": "./install-with-types.sh"
   },
   "keywords": [],
   "author": "",
