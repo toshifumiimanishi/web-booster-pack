@@ -13,7 +13,8 @@
     "format:html": "prettier --write 'htdocs/**/*.html'",
     "format:css": "stylelint --fix 'src/sass/css/**/*.scss'",
     "format:js": "eslint --fix 'src/ts/js/**/*.ts'",
-    "e2e": "jest test/e2e/snapshot.test.js"
+    "e2e": "jest test/e2e/snapshot.test.js",
+    "preinstall": "typesync || :"
   },
   "keywords": [],
   "author": "",
@@ -71,6 +72,7 @@
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.0.5",
     "typescript": "^4.1.3",
+    "typesync": "^0.8.0",
     "vuepress": "^1.8.0"
   },
   "jest": {
